@@ -1,12 +1,20 @@
 body {
-    background-color: #2ecadc;
+    background-color: #90E0F3;
 }
-main {
-    background-color: #55CDF1;
+body {
+    color: #121AA1;
 }
-header {
-    background-color: #55CDF1;
+@font-face {
+    font-family: 'OCRB';
+    src: url('/fonts/OCRB-Regular.ttf') format('truetype');
 }
-footer {
-    background-color: #55CDF1;
+body {
+    font-family: 'OCRB';
+}
+@font-face {
+    font-family: 'AllrounderAntiqua';
+    src: url('/fonts/AllrounderAntiquaTest-Book.otf') format('opentype');
+}
+h1 {
+    font-family: 'AllrounderAntiqua';
 }

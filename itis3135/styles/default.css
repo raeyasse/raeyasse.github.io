@@ -1,0 +1,23 @@
+body {
+    background-color:#FEFFE8 ;
+}
+body {
+    color: #035E7B;
+}
+
+@font-face {
+    font-family: 'OCRB';
+    src: url('/fonts/OCRB-Regular.ttf') format('truetype');
+}
+body {
+    font-family: 'OCRB';
+}
+
+@font-face {
+    font-family: 'AllrounderAntiqua';
+    src: url('/fonts/AllrounderAntiquaTest-Book.otf') format('opentype');
+}
+h1 {
+    font-family: 'AllrounderAntiqua';
+}
+
