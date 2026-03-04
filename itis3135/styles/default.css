@@ -1,8 +1,18 @@
 body {
     background-color:#FEFFE8 ;
 }
+header {
+    color: #FFFFFF;
+}
 body {
     color: #035E7B;
+}
+footer {
+    color: #FFFFFF;
+}
+
+header {
+    text-align: center;
 }
 
 @font-face {
@@ -20,4 +30,49 @@ body {
 h1 {
     font-family: 'AllrounderAntiqua';
 }
+header {
+    background-color: #005D8F;
+}
+footer {
+    background-color: #005D8F;
+}
+body {
+    max-width: 900px;
+}
+body {
+    margin: auto;
+}
 
+footer {
+    text-align: center;
+}
+
+header a:link, footer a:link {
+    color: #FFFFFF;
+}
+
+/* Link color for header and footer */
+header a:visited, footer a:visited {
+    color:#FFD166
+}
+header a:hover, footer a:hover {
+    color: #FFD166 ;
+}
+header a:focus, footer a:focus {
+    color: #FFFFFF;
+}
+
+/* Link color for the body */
+main a:link {
+    color: #28AFB0;
+}
+
+main a:visited {
+    color:#D62828
+}
+main a:hover {
+    color: #EB6F7A ;
+}
+main a:focus {
+    color: #EB6F7A;
+}
