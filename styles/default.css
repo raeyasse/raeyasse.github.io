@@ -1,9 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
     background-color: #90E0F3;
 }
 body {
     color: #121AA1;
 }
+header {
+    background-color: #2176AE;
+    padding: 10px 0;
+    
+}
+h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-family: 'AllrounderAntiqua';
+}
+
 @font-face {
     font-family: 'OCRB';
     src: url('../fonts/OCRB-Regular.ttf') format('truetype');
@@ -15,6 +32,19 @@ body {
     font-family: 'AllrounderAntiqua';
     src: url('../fonts/AllrounderAntiquaTest-Book.otf') format('opentype');
 }
-h1 {
-    font-family: 'AllrounderAntiqua';
+
+
+/* Page alignment */
+footer, main {
+    max-width: 900px;
+}
+footer, main {
+    margin: auto;
+}
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }

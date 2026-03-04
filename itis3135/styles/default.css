@@ -1,19 +1,21 @@
+
 body {
     background-color:#FEFFE8 ;
+    
 }
 header {
     color: #FFFFFF;
+    padding: 20px 0;
 }
 body {
     color: #035E7B;
 }
 footer {
     color: #FFFFFF;
+    padding: 10px;
 }
 
-header {
-    text-align: center;
-}
+
 
 @font-face {
     font-family: 'OCRB';
@@ -36,11 +38,16 @@ header {
 footer {
     background-color: #005D8F;
 }
+
+/* Page alignment */
 body {
     max-width: 900px;
 }
 body {
     margin: auto;
+}
+header {
+    text-align: center;
 }
 
 footer {
@@ -53,7 +60,7 @@ header a:link, footer a:link {
 
 /* Link color for header and footer */
 header a:visited, footer a:visited {
-    color: #FFC847
+    color: #4DD0FF
 }
 header a:hover, footer a:hover {
     color: #FFE099 ;
