@@ -63,10 +63,10 @@ header a:visited, footer a:visited {
     color: #4DD0FF
 }
 header a:hover, footer a:hover {
-    color: #FFE099 ;
+    color: #FFC847 ;
 }
 header a:focus, footer a:focus {
-    color: #FFFFFF;
+    color: #FFC847;
 }
 
 /* Link color for the body */
@@ -75,11 +75,11 @@ main a:link {
 }
 
 main a:visited {
-    color:#D62828
+    color:#4DD0FF
 }
 main a:hover {
-    color: #EB6F7A ;
+    color: #D62828 ;
 }
 main a:focus {
-    color: #EB6F7A;
+    color: #D62828;
 }
