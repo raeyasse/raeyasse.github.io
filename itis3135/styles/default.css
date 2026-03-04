@@ -53,10 +53,10 @@ header a:link, footer a:link {
 
 /* Link color for header and footer */
 header a:visited, footer a:visited {
-    color:#FFD166
+    color: #FFC847
 }
 header a:hover, footer a:hover {
-    color: #FFD166 ;
+    color: #FFE099 ;
 }
 header a:focus, footer a:focus {
     color: #FFFFFF;
