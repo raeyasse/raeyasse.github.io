@@ -4,79 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
     <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-        }
-        body {
-            background-color: #393665;
-        }
-        body {
-            color: #CF96FD;
-        }
+        
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
 
-        /* Link color for header and footer */
-body a:link {
-    color: #FFFFFA;
+    body {
+    background-color:#D81E5B ;
+    }
+
+    header {
+        color: #23395B;
+        padding: 2px 0;
+    }
+
+    body {
+    color: #ffffff;
+    }
+    footer {
+    color: #FFFFFF;
+    padding: 1px 0px 15px 0;
+    }
+    h1{
+        font-family: "Jacquard 12", system-ui;
+        font-size: 70px;
+    }
+    ul {
+  list-style-type: square;
 }
-body a:visited {
-    color: #FFFFFA
+
+/* Apply this to all tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
 }
-body a:hover {
-    color: #FFFFFA ;
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  vertical-align: top;
 }
-body a:focus {
-    color: #FFFFFA;
+
+table thead tr {
+  background-color: #23395B;
+  text-align: left;
+}
+
+header {
+    background-color: #FFFD98;
+}
+footer {
+    background-color: #23395B;
+}
+
+
+        section{
+display:none;
+}
+
+section.active{
+display:block;
+}
+
+/* Link color for header and footer */
+header a:link, footer a:link {
+    color: #FFFD98;
+}
+header a:visited, footer a:visited {
+    color: #68C3D4
+}
+header a:hover, footer a:hover {
+    color: #EECFD4 ;
+}
+header a:focus, footer a:focus {
+    color: #EECFD4;
+}
+
+@font-face {
+    font-family: 'AllrounderAntiqua';
+    src: url('../../fonts/AllrounderAntiquaTest-Book.otf') format('opentype');
+}
+h2 {
+    font-family: 'AllrounderAntiqua';
+}
+h3{
+    margin: 10px;
+}
+
+figure {
+    text-align: center;
+}
+
+/* Page alignment */
+body {
+    max-width: 900px;
+}
+body {
+    margin: auto;
+}
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }
     </style>
+    
 </head>
 <body>
     <header>
         <h1>Video Editing</h1>
+        <nav>
+<a href="#" onclick="showSection('what')">What</a> ✦
+<a href="#" onclick="showSection('who')">Who</a> ✦
+<a href="#" onclick="showSection('when')">When</a> ✦
+<a href="#" onclick="showSection('where')">Where</a> ✦
+<a href="#" onclick="showSection('how')">How</a> ✦
+<a href="#" onclick="showSection('why')">Why</a> ✦
+<a href="#" onclick="showSection('ai')">AI Prompts</a>
+</nav>
+<hr>
     </header>
     <main>
-        <section>
-            <h2>What</h2>
+        <section id="what" class="active">
+            <h2>What does an editor do?</h2>
             <p>Video editing is the process of taking raw video footage and organizing, cutting, and modifying it to
                 create a finished video. It involves selecting the best clips, arranging them in a meaningful order,
                 adjusting timing, and adding elements like transitions, music, sound effects, and visual enhancements.
                 Through editing, separate pieces of footage are combined to form a clear story or message. The goal of
                 video editing is to turn unedited recordings into a polished and engaging final product that communicates
                 ideas effectively to an audience.</p>
+                <figure>
+                    <img src="images/editing_timeline.jpg" alt="Video Editing Timeline" width="500"/>
+                    <figcaption><em>My video editing Timeline in premiere pro.</em></figcaption>
+                </figure>
+                <table>
+  <thead>
+    <tr>
+      <th>Editing Element</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cutting Clips</td>
+      <td>Selecting and trimming footage to keep the most important moments.</td>
+    </tr>
+    <tr>
+      <td>Transitions</td>
+      <td>Smoothly moving from one clip to another to improve visual flow.</td>
+    </tr>
+    <tr>
+      <td>Color Correction</td>
+      <td>Adjusting brightness, contrast, and color to improve visual quality.</td>
+    </tr>
+    <tr>
+      <td>Sound Editing</td>
+      <td>Balancing music, dialogue, and sound effects in the video.</td>
+    </tr>
+    <tr>
+      <td>Visual Effects</td>
+      <td>Adding effects, graphics, or animations to enhance the video.</td>
+    </tr>
+  </tbody>
+</table>
+
+</table>
         </section>
-        <section>
-            <h2>Who</h2>
-            <p>Video editing is done by people known as video editors. These individuals work with recorded footage to assemble, cut, and refine videos into a final product. Video editors can include professionals in the film, television, and media industries, as well as content creators who produce videos for platforms like YouTube or social media. Anyone with access to editing software and footage can practice video editing, from beginners learning the basics to experienced editors who specialize in storytelling, visual effects, or cinematic production.</p>
-        </section>
-        <section>
-            <h2>When</h2>
+        <section id="who">
+            <h2>Who are Video Editors?</h2>
+            <p>Video editing is done by people known as video editors. These individuals work with recorded footage to assemble, cut, and refine
+                 videos into a final product. Video editors can include professionals in the film, television, and media industries, as well as content creators who produce videos for platforms like YouTube or social media. Anyone with access to editing software and footage can practice video editing, from beginners learning the basics to experienced editors who specialize in storytelling, visual effects, or cinematic production.</p>
+                <figure>
+                    <img src="images/me_editing.jpg" alt="Video Editing Timeline" width="500"/>
+                    <figcaption><em>In the process of making my edit.</em></figcaption>
+                </figure>
+                <table class="video-table">
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Who</td>
+      <td>
+        Video editing is done by people known as video editors. These individuals work with recorded footage to assemble, cut, and refine videos into a final product. Video editors can include professionals in the film, television, and media industries, as well as content creators who produce videos for platforms like YouTube or social media. Anyone with access to editing software and footage can practice video editing, from beginners learning the basics to experienced editors who specialize in storytelling, visual effects, or cinematic production.
+      </td>
+    </tr>
+    <tr>
+      <td>Video Editing Timeline</td>
+      <td>In the process of making my edit.</td>
+    </tr>
+  </tbody>
+</table>
+            </section>
+        <section id="when">
+            <h2>When does video editing take place?</h2>
             <p>Video editing takes place after the footage has been recorded during the production process. Once filming is complete, the editor reviews the raw clips, selects the best moments, and arranges them into a structured sequence. Editing can happen at different stages depending on the project, but it typically occurs during post-production, where visuals, sound, and effects are refined to create the final version of the video.</p>
+        <figure>
+                    <img src="images/editing_hobby.jpg" alt="Video Editing Timeline" width="500"/>
+                    <figcaption><em>Color grading and refining one of my edits.</em></figcaption>
+                </figure>
+                <table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Initial Review</td>
+      <td>Watch all recorded clips from filming the Olympics footage.</td>
+    </tr>
+    <tr>
+      <td>Selection</td>
+      <td>Pick the most exciting moments: gold medal finishes, crowd reactions, and dramatic plays.</td>
+    </tr>
+    <tr>
+      <td>Assembly</td>
+      <td>Arrange selected clips into chronological order for storytelling.</td>
+    </tr>
+    <tr>
+      <td>Refinement</td>
+      <td>Adjust brightness, contrast, and apply color grading to unify look.</td>
+    </tr>
+    <tr>
+      <td>Timeline Example</td>
+      <td>Color grading and refining one of my edits to match the music tempo.</td>
+    </tr>
+  </tbody>
+</table>
+            
         </section>
-        <section>
-            <h2>Where</h2>
+        <section id="where">
+            <h2>Where can editing be done?</h2>
             <p>Video editing can be done almost anywhere as long as a computer and editing software are available. Many people edit videos at home on personal computers, while professionals may work in studios or production offices. Because editing is done digitally, it can also be done remotely or while traveling, making it a flexible hobby that can be practiced in many different environments.</p>
+        <figure>
+                    <img src="images/ediitng_home.jpg" alt="Video Editing Timeline" width="500"/>
+                    <figcaption><em>Working on an edit from home.</em></figcaption>
+                </figure>
+                <table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Example Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Home</td>
+      <td>Edit on my laptop using Adobe Premiere Pro while listening to reference music.</td>
+    </tr>
+    <tr>
+      <td>Studio</td>
+      <td>Professional environment for collaborating on a short film with team members.</td>
+    </tr>
+    <tr>
+      <td>Coffee Shop</td>
+      <td>Quick edits or rough cuts using a lightweight laptop and headphones.</td>
+    </tr>
+    <tr>
+      <td>Remote/Travel</td>
+      <td>Edit sports clips from cloud storage while traveling, syncing to timeline offline.</td>
+    </tr>
+    <tr>
+      <td>Timeline Example</td>
+      <td>Working on an edit from home on the weekend to finalize a highlight reel.</td>
+    </tr>
+  </tbody>
+</table>
         </section>
-        <section>
-            <h2>How</h2>
+        <section id="how">
+            <h2>How is video edited</h2>
             <p>Video editing is done using specialized software such as Adobe Premiere Pro that allows editors to import footage, trim clips, arrange
                  them on a timeline, and add effects or audio. Editors begin by reviewing all recorded footage and selecting
                   the best clips. These clips are then organized into a sequence that tells a story or delivers a message. 
                   Additional elements such as music, transitions, color correction, and visual effects are added to improve
                    the overall quality of the video.</p>
-        </section>
-        <section>
+        <figure>
+                    <img src="images/after_effects_vs_premiere_pro.jpg" alt="After Effects" width="500"/>
+                    <figcaption><em>Using one of those specialized softwares to create animations.</em></figcaption>
+                </figure>
+                <table>
+  <thead>
+    <tr>
+      <th>Tool / Step</th>
+      <th>Practical Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Software</td>
+      <td>Adobe Premiere Pro for trimming clips, arranging sequences, and adding audio tracks.</td>
+    </tr>
+    <tr>
+      <td>Clip Selection</td>
+      <td>Choose high-impact clips: close-ups of athletes, reaction shots, and crowd cheers.</td>
+    </tr>
+    <tr>
+      <td>Timeline Editing</td>
+      <td>Drag clips onto timeline, align with beats of the song “Headlock”.</td>
+    </tr>
+    <tr>
+      <td>Effects</td>
+      <td>Apply transitions, motion graphics, and text overlays for highlights.</td>
+    </tr>
+    <tr>
+      <td>After Effects</td>
+      <td>Create animated title sequences and smooth motion graphics for intro/outro.</td>
+    </tr>
+  </tbody>
+</table>
+                </section>
+        
+        <section id="why">
             <h2>Why</h2>
             <p>People enjoy video editing because it allows them to be creative while working with technology. Editing makes
                  it possible to transform simple recordings into engaging and meaningful content. It can also be a way to tell 
                  stories, share experiences, or create entertaining media for others to watch. For many hobbyists, the process of
                   shaping footage into a finished video is both satisfying and rewarding.</p>
+        <figure>
+
+                    <img src="images/headlock.jpg" alt="Editing Showcase" width="500"/>
+                    <figcaption><em>My most recent creative edit, used footage from the olypics and edited in after effects to the song "Headlock". Was very satisfying and rewarding</em></figcaption>
+                </figure>
+                <table>
+  <thead>
+    <tr>
+      <th>Motivation</th>
+      <th>Real Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Creativity</td>
+      <td>Transform raw Olympic footage into an energetic highlight reel that tells a story.</td>
+    </tr>
+    <tr>
+      <td>Storytelling</td>
+      <td>Combine reactions, key plays, and music to convey the excitement of the event.</td>
+    </tr>
+    <tr>
+      <td>Skill Building</td>
+      <td>Practice color grading, timing cuts to music, and creating smooth transitions.</td>
+    </tr>
+    <tr>
+      <td>Satisfaction</td>
+      <td>Publish the completed edit on social media and see audience engagement and feedback.</td>
+    </tr>
+    <tr>
+      <td>Editing Showcase</td>
+      <td>My most recent creative edit using Olympics footage and After Effects with the song "Headlock".</td>
+    </tr>
+  </tbody>
+</table>
         </section>
-        <section>
+        <section id="ai">
             <h2>AI Prompts</h2>
             <p>I used AI to help generate some of the text content for this website. I asked for help writing sections that 
                 explain video editing as a hobby. The prompts included requests such as writing explanations for the “Who,” “What,” 
                 “When,” “Where,” “How,” and “Why” sections about video editing. The generated text was then reviewed and adjusted to 
-                fit the content and purpose of the site.</p>
+                fit the content and purpose of the site.
+            
+            For this project, I used ChatGPT to help with part of the technical implementation of the website. Specifically, I asked for help creating the structure that allows a one-page website to switch between different sections when clicking navigation links.
+Example prompt used:
+“Provide the code to make navigation links switch between sections on a one-page website so only the selected section is visible at a time.”
+The generated code was reviewed and incorporated into the project to implement the required one-page navigation functionality.</p>
         </section>
     </main>
     <footer>
@@ -85,15 +384,31 @@ body a:focus {
         <br>
         Page Designed by <a href="../rassefadesigns.com/index.html">Raey Assefa Enterprises</a>
   <a href="https://validator.w3.org/check?uri=referer">
+    <br>
+    <br>
     <img src="https://www.w3.org/Icons/valid-html401" alt="Validate HTML">
   </a>
   <a href="https://jigsaw.w3.org/css-validator/check/referer">
     <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Validate CSS">
   </a>
+  <br>
   <a href="https://wave.webaim.org/report#/">
-  <img src="https://www.inclusionhub.com/hubfs/WAVE%20logomark.jpg" width="50"
-       alt="Accessibility Check">
+ Accesibility Check
 </a>
     </footer>
+    <script>
+function showSection(id){
+
+let sections = document.querySelectorAll("section");
+
+sections.forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+</script>
+
 </body>
 </html>
