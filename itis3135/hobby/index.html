@@ -33,6 +33,14 @@
   list-style-type: square;
 }
 
+header a:link {
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+    margin-bottom: 16px !important;
+    margin-top: 0px !important;
+    display: inline-block !important; /* This is key! Margins don't always work on standard links */
+    text-decoration: none;
+}
 /* Apply this to all tables */
 table {
   width: 100%;
@@ -71,6 +79,8 @@ display:block;
 /* Link color for header and footer */
 header a:link {
     color: #23395B;
+    font-family: "Jacquard 12", system-ui;
+    font-size: 35px;
 }
 footer a:link {
     color: #FFFD98;
@@ -121,7 +131,7 @@ footer {
     <header>
         <h1>Video Editing</h1>
         <nav>
-<a href="#" onclick="showSection('what')">What</a> ✦
+<a href="#" onclick="showSection('what')">What</a> ✦ 
 <a href="#" onclick="showSection('who')">Who</a> ✦
 <a href="#" onclick="showSection('when')">When</a> ✦
 <a href="#" onclick="showSection('where')">Where</a> ✦
@@ -395,12 +405,11 @@ The generated code was reviewed and incorporated into the project to implement t
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
             src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!" />
+            alt="Valid CSS!" >
     </a>
       <p></p>
-<a href="https://wave.webaim.org/refer">
-  <img src="images/wavelogo.png" width="95px" alt="WAVE Accessibility Tool">
-  
+  <a href="https://wave.webaim.org/refer">
+  <img src="images/wavelogo.jpg" width="95" alt="WAVE Accessibility Tool">
 </a>
     </footer>
     <script>
