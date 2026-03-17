@@ -14,14 +14,6 @@
 <body>
     <div data-include="components/header.html" data-replace="%name%:Survey"></div>
     <main>
-        <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Survey Form</title>
-  </head>
-
-  <body>
     <h1 id="title">Ambitious Rabbit Adventure Guild Application</h1>
     <p id="description">Join the Ambitious Rabbit on daring quests across forests, mountains, and hidden burrows. Fill out this form to apply to the guild.</p>
     <form id="survey-form">
@@ -75,22 +67,18 @@
       Still Learning
 
       <p>Which guild activities interest you? (Select all that apply)</p>
-      <input type="checkbox" value="housing">Treasure Hunts<checkbox>
-      <input type="checkbox" value="dinning">Monster Tracking<checkbox>
-      <input type="checkbox" value="library">Map Exploration<checkbox>
-      <input type="checkbox" value="parking">Artifact Recovery<checkbox>
-      <input type="checkbox" value="parking">Burrow Construction<checkbox>
-      <input type="checkbox" value="parking">Carrot Farming<checkbox>
+      <label><input type="checkbox" value="housing">Treasure Hunts</label>
+      <label><input type="checkbox" value="dinning">Monster Tracking</label>
+      <label><input type="checkbox" value="library">Map Exploration</label>
+      <label><input type="checkbox" value="parking">Artifact Recovery</label>
+      <label><input type="checkbox" value="parking">Burrow Construction</label>
+      <label><input type="checkbox" value="parking">Carrot Farming</label>
 
       <p>Why should Ambitious Rabbit recruit you?</p>
       <textarea placeholder="Tell us about your skills, bravery, or past adventures..." cols="40"></textarea><br/>
 
       <button id="submit">Begin Your Adventure</button>
-
-
     </form>
-  </body>
-</html>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
