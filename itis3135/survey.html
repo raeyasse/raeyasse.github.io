@@ -14,8 +14,83 @@
 <body>
     <div data-include="components/header.html" data-replace="%name%:Survey"></div>
     <main>
-        <h2>Survey under construction</h2>
-        <p>This page will contain the survey project</p>
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Ambitious Rabbit Adventure Guild Application</h1>
+    <p id="description">Join the Ambitious Rabbit on daring quests across forests, mountains, and hidden burrows. Fill out this form to apply to the guild.</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Explorer Name</label>
+      <input
+      required
+      id="name"
+      type="text"
+      size="25"
+      placeholder="Enter your adventurer name">
+      <br/>
+
+      <label for="email" id="email-label">Messenger Owl Contact</label>
+      <input
+      required
+      id="email"
+      type="email"
+      size="40"
+      placeholder="Where should we send your quest updates?">
+      <br/>
+
+      <label for="number" id="number-label">Explorer Age (optional)</label>
+      <input
+      required
+      min="18"
+      max="35"
+      id="number"
+      type="number"
+      placeholder="Age">
+
+      <p>Choose your Adventurer Class</p>
+
+      <select id="dropdown">
+        <option>Scout</option>
+        <option>Treasure Hunter</option>
+        <option>Map Navigator</option>
+        <option>Beast Tamer</option>
+        <option>Burrow Engineer</option>
+        <option>Guild Strategist</option>
+      </select>
+      <p>How ready are you for dangerous quests?</p>
+      <input id="offcourse-option" type="radio" name="would-recommend" value="offcourse-option">
+      Born Ready
+      
+      
+      <input id="yes-option" type="radio" name="would-recommend" value="yes-option">
+      Ready with Training
+      
+
+      <input id="no-option" type="radio" name="would-recommend" value="no-option">
+      Still Learning
+
+      <p>Which guild activities interest you? (Select all that apply)</p>
+      <input type="checkbox" value="housing">Treasure Hunts<checkbox>
+      <input type="checkbox" value="dinning">Monster Tracking<checkbox>
+      <input type="checkbox" value="library">Map Exploration<checkbox>
+      <input type="checkbox" value="parking">Artifact Recovery<checkbox>
+      <input type="checkbox" value="parking">Burrow Construction<checkbox>
+      <input type="checkbox" value="parking">Carrot Farming<checkbox>
+
+      <p>Why should Ambitious Rabbit recruit you?</p>
+      <textarea placeholder="Tell us about your skills, bravery, or past adventures..." cols="40"></textarea><br/>
+
+      <button id="submit">Begin Your Adventure</button>
+
+
+    </form>
+  </body>
+</html>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

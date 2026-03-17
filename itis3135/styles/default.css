@@ -15,7 +15,9 @@ footer {
     padding: 10px;
 }
 
-
+main {
+    padding-bottom: 30px;
+}
 
 @font-face {
     font-family: 'OCRB';
