@@ -108,7 +108,7 @@ main a:focus {
 
 }
 
-.left{
+.left {
   align-self: flex-start;
 }
 
@@ -118,12 +118,12 @@ main a:focus {
   flex-direction: column;
 }
 
-.right{
+.right {
   align-self: flex-end;
   transform:rotate(180deg);
 }
 
-p{
+.character {
     font-size: 45px;
     margin:-12px 0px;
 }
