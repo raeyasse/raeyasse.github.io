@@ -134,13 +134,13 @@ main a:focus {
 
 /* Inventory */
 tr[class="read"] {
-  background-image: linear-gradient(to right, #A1FFB0, #24E043);
+  background-image: linear-gradient(to right, #ffffff, #24E043);
 }
 tr[class="to-read"] {
-  background-image: linear-gradient(to right, #0FFFF3, #0095FF);
+  background-image: linear-gradient(to right, #ffffff, #ff0062);
 }
 tr[class="in-progress"] {
-  background-image: linear-gradient(to right, #ffd191, #FF7D7D);
+  background-image: linear-gradient(to right, #ffffff, #0095FF);
 }
 
 span {
@@ -149,7 +149,7 @@ span {
 
 tr[class="to-read"] span[class="status"] {
   border: 2px solid black;
-  background-image: linear-gradient(to right, #0FFFF3, #0095FF);
+  background-image: linear-gradient(to right, #ffffff, #0095FF);
   padding: 12px;
   margin: 2px;
   border-radius: 5px;
@@ -157,7 +157,7 @@ tr[class="to-read"] span[class="status"] {
 
 tr[class="read"] span[class="status"] {
   border: 2px solid black;
-  background-image: linear-gradient(to right, #A1FFB0, #24E043);
+  background-image: linear-gradient(to right, #FFFFFF, #24E043);
   padding: 12px;
   margin: 2px;
   border-radius: 5px;
@@ -165,7 +165,7 @@ tr[class="read"] span[class="status"] {
 
 tr[class="in-progress"] span[class="status"] {
   border: 2px solid black;
-  background-image: linear-gradient(to right, #FCB045, #FF7D7D);
+  background-image: linear-gradient(to right, #ffffff, #ff0062);
   padding: 12px;
   margin: 2px;
   border-radius: 5px;
