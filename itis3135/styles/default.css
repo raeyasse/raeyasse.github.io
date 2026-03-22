@@ -131,3 +131,125 @@ main a:focus {
 .red{
     color:red;
 }
+
+/* Inventory */
+tr[class="read"] {
+  background-image: linear-gradient(to right, #A1FFB0, #24E043);
+}
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, #0FFFF3, #0095FF);
+}
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, #ffd191, #FF7D7D);
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(to right, #0FFFF3, #0095FF);
+  padding: 12px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(to right, #A1FFB0, #24E043);
+  padding: 12px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(to right, #FCB045, #FF7D7D);
+  padding: 12px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+span[class="status"],
+span[class^="rate"] {
+  height: 20px;
+  width: 120px;
+  padding: 4px;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 2px;
+  height: 10px;
+  width: 10px;
+  background-color: lightblue;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Documentation Page */
+#doc-wrapper {
+  display: flex;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;  /* crucial — without this, sticky won't work in flexbox */
+  height: 100vh;
+  width: 260px;
+  min-width: 260px;
+  overflow-y: auto;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+
+#main-doc {
+  flex: 1;
+  padding-left: 5px;
+  padding-top: 20px;
+}
+
+
+#navbar a {
+    display: block;        
+    padding: 45px 20px;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #f0f0f0;  /* highlight on hover */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  #main-doc {
+    margin-left: 0;
+  }
+}

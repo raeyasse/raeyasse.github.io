@@ -14,8 +14,78 @@
 <body>
     <div data-include="components/header.html" data-replace="%name%:Inventory"></div>
     <main>
-        <h2>Inventory under construction</h2>
-        <p>This page will contain the inventory project</p>
+        <h1>Book Inventory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Rate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="read">
+      <td>Alice in Wonderland</td>
+      <td>Lewis Carroll</td>
+      <td>Fantasy Fiction</td>
+      <td><span class="status">Read</span></td>
+      <td>
+        <span class="rate three">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="to-read">
+      <td>Pat the Bunny</td>
+      <td>Dorothy Kunhardt</td>
+      <td>Childrens Fiction</td>
+      <td><span class="status">To Read</span></td>
+      <td>
+        <span class="rate two">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="in-progress">
+      <td>The Tale of Peter Rabbit</td>
+      <td>Beatrix Potter</td>
+      <td>Fiction</td>
+      <td><span class="status">In Progress</span></td>
+      <td>
+        <span class="rate one">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="to-read">
+      <td>Mr. Rabbit and the Lovely Present</td>
+      <td>Charlotte Zolotow
+</td>
+      <td>Fiction</td>
+      <td><span class="status">To Read</span></td>
+      <td>
+        <span class="rate three">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
