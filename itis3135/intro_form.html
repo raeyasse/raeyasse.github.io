@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    fieldset {
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .row label {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .small {
+      flex: 0.5;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Introduction Form</h2>
+  <h3>Please submit the form below.</h3>
+
+  <form id="introForm">
+
+    <!-- NAME -->
+    <fieldset>
+      <legend>Name</legend>
+      <div class="row">
+        <label>First Name
+          <input type="text" id="firstName" value="Raey" required>
+        </label>
+
+        <label class="small">Middle
+          <input type="text" id="middleName">
+        </label>
+
+        <label>Last Name
+          <input type="text" id="lastName" value="Assefa" required>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Preferred Name
+          <input type="text" id="nickname">
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- MASCOT -->
+    <fieldset>
+      <legend>Mascot</legend>
+      <div class="row">
+        <label>Adjective
+          <input type="text" id="mascotAdj" value="Ambitious">
+        </label>
+
+        <label>Animal
+          <input type="text" id="mascotAnimal" value="Rabbit">
+        </label>
+
+        <label>Divider
+          <input type="text" id="divider" value="|">
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- IMAGE -->
+    <fieldset>
+      <legend>Image</legend>
+      <label>Upload Image
+        <input type="file" id="image">
+      </label>
+
+      <label>Caption
+        <input type="text" id="caption" value="Mr Marlowe under a Christmas tree.">
+      </label>
+    </fieldset>
+
+    <!-- PERSONAL -->
+    <fieldset>
+      <legend>Personal Info</legend>
+
+      <label>Personal Statement
+        <textarea id="personalStatement">I’m a junior at UNC Charlotte studying Computer Science with a concentration in Web/Mobile Development & Software Engineering. I’m excited to build creative and responsive webpages this semester.</textarea>
+      </label>
+
+      <label>Personal Background
+        <textarea id="personalBackground">I’m currently 21 years old and I enjoy building computers and editing videos using Adobe CC.</textarea>
+      </label>
+
+      <label>Professional Background
+        <textarea id="professionalBackground">I previously interned as a computer IT tech/productions intern at a non profit and was a technology instructor with the same company after. My last job experience was my community college where I worked as their first Energy Intern.</textarea>
+      </label>
+
+      <label>Academic Background
+        <textarea id="academicBackground">I’m currently a Junior at UNC Charlotte studying computer science. Before that I attended Wake Technical Community College and graduated with my associate in Science.</textarea>
+      </label>
+
+      <label>Subject Background
+        <textarea id="subjectBackground">I am completely new to this subject.</textarea>
+      </label>
+
+      <label>Primary Computer
+        <textarea id="primaryComputer">The laptop I use for university is an M1 Macbook Pro. I also use a custom built Windows 11 Pro computer at home.</textarea>
+      </label>
+
+      <label>Backup Plan
+        <textarea id="backupPlan">I will go to the Atkins Library and get a loaner laptop. Apartment and McEniry 116.</textarea>
+      </label>
+    </fieldset>
+
+    <!-- COURSES -->
+    <fieldset>
+      <legend>Courses</legend>
+
+      <div class="row">
+        <input type="text" class="courseDept" value="ITSC">
+        <input type="text" class="courseNum" value="2181">
+        <input type="text" class="courseName" value="Intro to Computer Systems">
+        <input type="text" class="courseReason" value="Core foundational course for understanding how computer systems work.">
+      </div>
+
+      <div class="row">
+        <input type="text" class="courseDept" value="ITIS">
+        <input type="text" class="courseNum" value="3135">
+        <input type="text" class="courseName" value="Front-End Web App Development">
+        <input type="text" class="courseReason" value="Practical, hands-on class that’s interesting.">
+      </div>
+
+      <div class="row">
+        <input type="text" class="courseDept" value="ITSC">
+        <input type="text" class="courseNum" value="2600">
+        <input type="text" class="courseName" value="CS Program, Identity, Career">
+        <input type="text" class="courseReason" value="Required class that helps in understanding the CS field for transfer students.">
+      </div>
+
+      <div class="row">
+        <input type="text" class="courseDept" value="ITSC">
+        <input type="text" class="courseNum" value="3688">
+        <input type="text" class="courseName" value="Computing & Their Impact on Society">
+        <input type="text" class="courseReason" value="Interesting class that explores the social, ethical, and global impacts of computing.">
+      </div>
+
+      <div class="row">
+        <input type="text" class="courseDept" value="MATH">
+        <input type="text" class="courseNum" value="2164">
+        <input type="text" class="courseName" value="Matrices & Linear Algebra">
+        <input type="text" class="courseReason" value="Required math course that supports advanced computing and technical coursework.">
+      </div>
+
+    </fieldset>
+
+    <!-- EXTRA -->
+    <fieldset>
+      <legend>Extra</legend>
+
+      <label>Funny Thing
+        <input type="text" id="funny" value="I can communicate proficiently in four different languages.">
+      </label>
+
+      <label>Something to Share
+        <input type="text" id="extra" value="I just moved to Charlotte.">
+      </label>
+    </fieldset>
+
+    <!-- QUOTE -->
+    <fieldset>
+      <legend>Quote</legend>
+
+      <label>Quote
+        <input type="text" id="quote" value="There's no learning without trying lots of ideas and failing lots of times.">
+      </label>
+
+      <label>Author
+        <input type="text" id="quoteAuthor" value="Johny Ive">
+      </label>
+    </fieldset>
+
+    <!-- LINKS -->
+    <fieldset>
+      <legend>Links</legend>
+
+      <input type="url" class="link" value="https://webpages.charlotte.edu/rassefa/itis3135/">
+      <input type="url" class="link" value="https://github.com/raeyasse/">
+      <input type="url" class="link" value="https://webpages.charlotte.edu/rassefa">
+      <input type="url" class="link" value="https://raeyasse.github.io">
+      <input type="url" class="link" value="https://www.linkedin.com/in/raey-asse/">
+    </fieldset>
+
+    <!-- ACK -->
+    <fieldset>
+      <legend>Acknowledgment</legend>
+
+      <input type="text" id="ack" value="I acknowledge that this work is my own.">
+      <input type="date" id="ackDate">
+    </fieldset>
+
+    <!-- BUTTONS -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button" id="clearBtn">Clear</button>
+
+  </form>
+</div>
+
+<script>
+  document.getElementById("clearBtn").addEventListener("click", function () {
+    document.querySelectorAll("#introForm input, #introForm textarea").forEach(el => {
+      el.value = "";
+    });
+  });
+</script>
+
+</body>
+</html>
+<script src="scripts/introduction.js"></script>
+</body>
+
+</html>
