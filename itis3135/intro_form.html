@@ -6,271 +6,332 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f5f5f5;
-    }
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css">
+    <style>
+        #introForm,
+        .result-panel {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
+        #introForm fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cfd7df;
+        }
 
-    h2, h3 {
-      text-align: center;
-    }
+        #introForm legend {
+            padding: 0 6px;
+            font-weight: 700;
+        }
 
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-    }
+        #introForm .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
 
-    fieldset {
-      margin-bottom: 15px;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-    }
+        #introForm .row label,
+        #introForm .stacked-label {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
 
-    .row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
+        .small {
+            flex: 0.5;
+        }
 
-    .row label {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+        #introForm input,
+        #introForm textarea,
+        #introForm button {
+            font: inherit;
+        }
 
-    .small {
-      flex: 0.5;
-    }
+        #introForm input,
+        #introForm textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #cfd7df;
+        }
 
-    input, textarea {
-      padding: 8px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+        #introForm textarea {
+            min-height: 84px;
+            resize: vertical;
+        }
 
-    textarea {
-      resize: vertical;
-    }
+        .courses-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-    button {
-      padding: 10px 15px;
-      margin-right: 10px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+        .course-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 3fr auto;
+            gap: 10px;
+            align-items: start;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #introForm button {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            background: #d9e7f7;
+            cursor: pointer;
+        }
+
+        .secondary {
+            background: #e9ecef;
+        }
+
+        .delete-course {
+            align-self: center;
+            background: #f8d7da;
+        }
+
+        pre {
+            overflow-x: auto;
+            border-radius: 10px;
+        }
+
+        .reset-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .error {
+            color: #b42318;
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .course-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #introForm {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stacked-label {
+            font-weight: bold;
+        }
+
+        .stacked-label input,
+        .stacked-label textarea {
+            font-weight: normal;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="app"></div>
 
-<div class="container">
-  <h2>Introduction Form</h2>
-  <h3>Please submit the form below.</h3>
+    <template id="formTemplate">
 
-  <form id="introForm">
+        <main class="container">
+            <br>
+            <h2 id="pageTitle">Introduction Form</h2>
+            <h3 id="pageSubtitle">Please submit the form below.</h3>
 
-    <!-- NAME -->
-    <fieldset>
-      <legend>Name</legend>
-      <div class="row">
-        <label>First Name
-          <input type="text" id="firstName" value="Raey" required>
-        </label>
+            <form id="introForm" novalidate>
+                <fieldset>
+                    <legend>Name</legend>
+                    <div class="row">
+                        <label>First Name
+                            <input type="text" id="firstName" name="firstName" value="Raey" placeholder="First name"
+                                required>
+                        </label>
+                        <label class="small">Middle Name / Initial
+                            <input type="text" id="middleName" name="middleName" value=""
+                                placeholder="Middle name or initial">
+                        </label>
+                        <label>Last Name
+                            <input type="text" id="lastName" name="lastName" value="Assefa" placeholder="Last name"
+                                required>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>Nickname / Preferred Name
+                            <input type="text" id="nickname" name="nickname" value="" placeholder="Preferred name">
+                        </label>
+                    </div>
+                </fieldset>
 
-        <label class="small">Middle
-          <input type="text" id="middleName">
-        </label>
+                <fieldset>
+                    <legend>Acknowledgment</legend>
+                    <div class="row">
+                        <label>Acknowledgment Statement
+                            <input type="text" id="ack" name="ack" value="I acknowledge that this work is my own."
+                                placeholder="Acknowledgment statement" required>
+                        </label>
+                        <label>Acknowledgment Date
+                            <input type="date" id="ackDate" name="ackDate" value="2026-03-26" required>
+                        </label>
+                    </div>
+                </fieldset>
 
-        <label>Last Name
-          <input type="text" id="lastName" value="Assefa" required>
-        </label>
-      </div>
+                <fieldset>
+                    <legend>Mascot</legend>
+                    <div class="row">
+                        <label>Mascot Adjective
+                            <input type="text" id="mascotAdj" name="mascotAdj" value="Ambitious"
+                                placeholder="Mascot adjective" required>
+                        </label>
+                        <label>Mascot Animal
+                            <input type="text" id="mascotAnimal" name="mascotAnimal" value="Rabbit"
+                                placeholder="Mascot animal" required>
+                        </label>
+                        <label>Divider
+                            <input type="text" id="divider" name="divider" value="|" placeholder="Divider symbol"
+                                required>
+                        </label>
+                    </div>
+                </fieldset>
 
-      <div class="row">
-        <label>Preferred Name
-          <input type="text" id="nickname">
-        </label>
-      </div>
-    </fieldset>
+                <fieldset>
+                    <legend>Picture</legend>
+                    <div class="row">
+                        <label>Picture
+                            <input type="file" id="image" name="image" accept="image/*">
+                        </label>
+                        <label>Picture Caption
+                            <input type="text" id="caption" name="caption" value="Mr Marlowe under a Christmas tree."
+                                placeholder="Picture caption" required>
+                        </label>
+                    </div>
+                </fieldset>
 
-    <!-- MASCOT -->
-    <fieldset>
-      <legend>Mascot</legend>
-      <div class="row">
-        <label>Adjective
-          <input type="text" id="mascotAdj" value="Ambitious">
-        </label>
+                <fieldset>
+                    <legend>Introduction Content</legend>
+                    <label class="stacked-label">Personal Statement
+                        <textarea id="personalStatement" name="personalStatement" placeholder="Personal statement"
+                            required>I’m a junior at UNC Charlotte studying Computer Science with a concentration in Web/Mobile Development & Software Engineering. I’m excited to build creative and responsive webpages this semester.</textarea>
+                    </label>
+                    <label class="stacked-label">Personal Background
+                        <textarea id="personalBackground" name="personalBackground" placeholder="Personal background"
+                            required>I’m currently 21 years old and I enjoy building computers and editing videos using Adobe CC.</textarea>
+                    </label>
+                    <label class="stacked-label">Professional Background
+                        <textarea id="professionalBackground" name="professionalBackground"
+                            placeholder="Professional background"
+                            required>I previously interned as a computer IT tech/productions intern at a non profit and was a technology instructor with the same company after. My last job experience was my community college where I worked as their first Energy Intern.</textarea>
+                    </label>
+                    <label class="stacked-label">Academic Background
+                        <textarea id="academicBackground" name="academicBackground" placeholder="Academic background"
+                            required>I’m currently a Junior at UNC Charlotte studying computer science. Before that I attended Wake Technical Community College and graduated with my associate in Science.</textarea>
+                    </label>
+                    <label class="stacked-label">Background in this Subject
+                        <textarea id="subjectBackground" name="subjectBackground"
+                            placeholder="Background in this subject"
+                            required>I am completely new to this subject.</textarea>
+                    </label>
+                    <label class="stacked-label">Primary Work Computer
+                        <textarea id="primaryComputer" name="primaryComputer" placeholder="Primary computer"
+                            required>The laptop I use for university is an M1 Macbook Pro. I also use a custom built Windows 11 Pro computer at home.</textarea>
+                    </label>
+                    <label class="stacked-label">Backup Work Computer & Location Plan
+                        <textarea id="backupPlan" name="backupPlan" placeholder="Backup plan"
+                            required>I will go to the Atkins Library and get a loaner laptop. Apartment and McEniry 116.</textarea>
+                    </label>
+                </fieldset>
 
-        <label>Animal
-          <input type="text" id="mascotAnimal" value="Rabbit">
-        </label>
+                <fieldset>
+                    <legend>Courses</legend>
+                    <div id="coursesList" class="courses-list"></div>
+                    <button class="secondary" type="button" id="addCourseBtn">Add Course</button>
+                </fieldset>
 
-        <label>Divider
-          <input type="text" id="divider" value="|">
-        </label>
-      </div>
-    </fieldset>
+                <fieldset>
+                    <legend>Quote</legend>
+                    <label class="stacked-label">Quote
+                        <input type="text" id="quote" name="quote"
+                            value="There's no learning without trying lots of ideas and failing lots of times."
+                            placeholder="Quote" required>
+                    </label>
+                    <label class="stacked-label">Quote Author
+                        <input type="text" id="quoteAuthor" name="quoteAuthor" value="Johny Ive"
+                            placeholder="Quote author" required>
+                    </label>
+                </fieldset>
 
-    <!-- IMAGE -->
-    <fieldset>
-      <legend>Image</legend>
-      <label>Upload Image
-        <input type="file" id="image">
-      </label>
+                <fieldset>
+                    <legend>Extra</legend>
+                    <label class="stacked-label">Funny Thing
+                        <input type="text" id="funny" name="funny"
+                            value="I can communicate proficiently in four different languages."
+                            placeholder="Funny thing">
+                    </label>
+                    <label class="stacked-label">Something I Would Like to Share
+                        <input type="text" id="extra" name="extra" value="I just moved to Charlotte."
+                            placeholder="Something to share">
+                    </label>
+                </fieldset>
 
-      <label>Caption
-        <input type="text" id="caption" value="Mr Marlowe under a Christmas tree.">
-      </label>
-    </fieldset>
+                <fieldset>
+                    <legend>Links</legend>
+                    <label class="stacked-label">LinkedIn / Link 1
+                        <input type="url" id="link1" name="link1"
+                            value="https://webpages.charlotte.edu/rassefa/itis3135/" placeholder="https://example.com"
+                            required>
+                    </label>
+                    <label class="stacked-label">Link 2
+                        <input type="url" id="link2" name="link2" value="https://github.com/raeyasse/"
+                            placeholder="https://example.com" required>
+                    </label>
+                    <label class="stacked-label">Link 3
+                        <input type="url" id="link3" name="link3" value="https://webpages.charlotte.edu/rassefa"
+                            placeholder="https://example.com" required>
+                    </label>
+                    <label class="stacked-label">Link 4
+                        <input type="url" id="link4" name="link4" value="https://raeyasse.github.io"
+                            placeholder="https://example.com" required>
+                    </label>
+                    <label class="stacked-label">Link 5
+                        <input type="url" id="link5" name="link5" value="https://www.linkedin.com/in/raey-asse/"
+                            placeholder="https://example.com" required>
+                    </label>
+                </fieldset>
 
-    <!-- PERSONAL -->
-    <fieldset>
-      <legend>Personal Info</legend>
+                <p id="formError" class="error" aria-live="polite"></p>
 
-      <label>Personal Statement
-        <textarea id="personalStatement">I’m a junior at UNC Charlotte studying Computer Science with a concentration in Web/Mobile Development & Software Engineering. I’m excited to build creative and responsive webpages this semester.</textarea>
-      </label>
+                <div class="button-row">
+                    <button type="submit">Submit</button>
+                    <button type="reset" class="secondary">Reset</button>
+                    <button type="button" class="secondary" id="clearBtn">Clear</button>
+                    <button type="button" id="generateJsonBtn">Generate JSON</button>
+                    <button type="button" id="generateHtmlBtn">Generate HTML</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <hr>
+            Made with AI | © 2026 rassefa Copyright Reserved.
+        </footer>
+        <br>
+    </template>
 
-      <label>Personal Background
-        <textarea id="personalBackground">I’m currently 21 years old and I enjoy building computers and editing videos using Adobe CC.</textarea>
-      </label>
-
-      <label>Professional Background
-        <textarea id="professionalBackground">I previously interned as a computer IT tech/productions intern at a non profit and was a technology instructor with the same company after. My last job experience was my community college where I worked as their first Energy Intern.</textarea>
-      </label>
-
-      <label>Academic Background
-        <textarea id="academicBackground">I’m currently a Junior at UNC Charlotte studying computer science. Before that I attended Wake Technical Community College and graduated with my associate in Science.</textarea>
-      </label>
-
-      <label>Subject Background
-        <textarea id="subjectBackground">I am completely new to this subject.</textarea>
-      </label>
-
-      <label>Primary Computer
-        <textarea id="primaryComputer">The laptop I use for university is an M1 Macbook Pro. I also use a custom built Windows 11 Pro computer at home.</textarea>
-      </label>
-
-      <label>Backup Plan
-        <textarea id="backupPlan">I will go to the Atkins Library and get a loaner laptop. Apartment and McEniry 116.</textarea>
-      </label>
-    </fieldset>
-
-    <!-- COURSES -->
-    <fieldset>
-      <legend>Courses</legend>
-
-      <div class="row">
-        <input type="text" class="courseDept" value="ITSC">
-        <input type="text" class="courseNum" value="2181">
-        <input type="text" class="courseName" value="Intro to Computer Systems">
-        <input type="text" class="courseReason" value="Core foundational course for understanding how computer systems work.">
-      </div>
-
-      <div class="row">
-        <input type="text" class="courseDept" value="ITIS">
-        <input type="text" class="courseNum" value="3135">
-        <input type="text" class="courseName" value="Front-End Web App Development">
-        <input type="text" class="courseReason" value="Practical, hands-on class that’s interesting.">
-      </div>
-
-      <div class="row">
-        <input type="text" class="courseDept" value="ITSC">
-        <input type="text" class="courseNum" value="2600">
-        <input type="text" class="courseName" value="CS Program, Identity, Career">
-        <input type="text" class="courseReason" value="Required class that helps in understanding the CS field for transfer students.">
-      </div>
-
-      <div class="row">
-        <input type="text" class="courseDept" value="ITSC">
-        <input type="text" class="courseNum" value="3688">
-        <input type="text" class="courseName" value="Computing & Their Impact on Society">
-        <input type="text" class="courseReason" value="Interesting class that explores the social, ethical, and global impacts of computing.">
-      </div>
-
-      <div class="row">
-        <input type="text" class="courseDept" value="MATH">
-        <input type="text" class="courseNum" value="2164">
-        <input type="text" class="courseName" value="Matrices & Linear Algebra">
-        <input type="text" class="courseReason" value="Required math course that supports advanced computing and technical coursework.">
-      </div>
-
-    </fieldset>
-
-    <!-- EXTRA -->
-    <fieldset>
-      <legend>Extra</legend>
-
-      <label>Funny Thing
-        <input type="text" id="funny" value="I can communicate proficiently in four different languages.">
-      </label>
-
-      <label>Something to Share
-        <input type="text" id="extra" value="I just moved to Charlotte.">
-      </label>
-    </fieldset>
-
-    <!-- QUOTE -->
-    <fieldset>
-      <legend>Quote</legend>
-
-      <label>Quote
-        <input type="text" id="quote" value="There's no learning without trying lots of ideas and failing lots of times.">
-      </label>
-
-      <label>Author
-        <input type="text" id="quoteAuthor" value="Johny Ive">
-      </label>
-    </fieldset>
-
-    <!-- LINKS -->
-    <fieldset>
-      <legend>Links</legend>
-
-      <input type="url" class="link" value="https://webpages.charlotte.edu/rassefa/itis3135/">
-      <input type="url" class="link" value="https://github.com/raeyasse/">
-      <input type="url" class="link" value="https://webpages.charlotte.edu/rassefa">
-      <input type="url" class="link" value="https://raeyasse.github.io">
-      <input type="url" class="link" value="https://www.linkedin.com/in/raey-asse/">
-    </fieldset>
-
-    <!-- ACK -->
-    <fieldset>
-      <legend>Acknowledgment</legend>
-
-      <input type="text" id="ack" value="I acknowledge that this work is my own.">
-      <input type="date" id="ackDate">
-    </fieldset>
-
-    <!-- BUTTONS -->
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-    <button type="button" id="clearBtn">Clear</button>
-
-  </form>
-</div>
-
-<script>
-  document.getElementById("clearBtn").addEventListener("click", function () {
-    document.querySelectorAll("#introForm input, #introForm textarea").forEach(el => {
-      el.value = "";
-    });
-  });
-</script>
-
-</body>
-</html>
-<script src="scripts/introduction.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
 </body>
 
 </html>
