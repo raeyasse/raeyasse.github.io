@@ -253,3 +253,300 @@ table {
     margin-left: 0;
   }
 }
+
+
+
+/* Product Page */
+
+/* VIDEO */
+#video {
+  display: block;
+  margin: 40px auto 0 auto;
+  margin-top: 40px;
+  width: 900px;
+  max-width: 100%;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+#nav-bar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+h2{
+  text-align:center;
+}
+
+/* Products Section */
+#products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#products h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Container for product cards */
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  width: 200px; /* Reduce from 250px to 200px */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual product card */
+.product {
+  background-color: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.product img {
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin: 0;
+}
+
+.product p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 80%;
+  }
+}
+
+/* Pricing Section */
+#pricing {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Container for pricing cards */
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Individual pricing card */
+.pricing-card {
+  background-color: #fff;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pricing-card .price {
+  font-size: 1.5rem;
+  color: #0077cc;
+  margin: 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin-bottom: 5px;
+}
+
+.pricing-card button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pricing-card button:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 80%;
+  }
+}
+
+#header-title {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#header-title h1 {
+  margin: 0;
+}
+
+/* Center the email form */
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+#email {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #005D8F;
+  border-radius: 5px;
+  width: 250px;
+}
+
+#submit {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #005fa3;
+}
+
+
+#top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-bar{
+  font-size: large;
+  margin-top: 20px;
+}
+#nav-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#nav-bar a:link,
+#nav-bar a:visited,
+#nav-bar a:hover,
+#nav-bar a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.feature img {
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.feature-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+}
+
+.feature-text p {
+  margin: 0;
+  color: #555;
+}
