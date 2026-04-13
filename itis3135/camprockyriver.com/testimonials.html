@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="icon" href="images/marmot.png" type="image/png">
+
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <section class="parent-reviews">
+            <h2>Parent Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"Camp Rocky River changed my son's life. He came home more confident,
+                        more independent, and already asking to go back next summer."</p>
+                    <h4>— Sarah M., Parent of a 10-year-old</h4>
+                </div>
+                <div class="review-card">
+                    <p>"As a family on EBT, I never thought overnight camp was possible for us.
+                        The sponsorship program made it a reality. We are so grateful."</p>
+                    <h4>— Marcus T., Parent of a 12-year-old</h4>
+                </div>
+                <div class="review-card">
+                    <p>"The staff genuinely cares about every camper. My daughter felt safe,
+                        supported, and had the best two weeks of her summer."</p>
+                    <h4>— Linda R., Parent of a 9-year-old</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="camper-stories">
+            <h2>Camper Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <p>"I was really scared to try the ropes course but my counselor
+                        helped me and I did it! It was the coolest thing I've ever done."</p>
+                    <h4>— Jake, age 11</h4>
+                </div>
+                <div class="story-card">
+                    <p>"I made my best friend at Camp Rocky River. We were in the same
+                        cabin and now we talk every single day after camp ended."</p>
+                    <h4>— Amara, age 13</h4>
+                </div>
+                <div class="story-card">
+                    <p>"Canoeing was my favorite part. I didn't even know how to swim
+                        great before camp but now I feel totally comfortable in the water."</p>
+                    <h4>— Tyler, age 9</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-quotes">
+            <h2>Moments from Camp</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/camp1.jpg" alt="Campers hiking a trail" />
+                    <blockquote>"The mountains taught me I can do hard things."</blockquote>
+                    <h4>— Riley, age 14</h4>
+                </div>
+                <div class="photo-card">
+                    <img src="images/camp2.jpg" alt="Campers canoeing on the river" />
+                    <blockquote>"Every morning on the river felt like a brand new adventure."</blockquote>
+                    <h4>— Destiny, age 12</h4>
+                </div>
+                <div class="photo-card">
+                    <img src="images/camp3.jpg" alt="Campers around a campfire" />
+                    <blockquote>"Campfire nights are something I will never forget."</blockquote>
+                    <h4>— Noah, age 10</h4>
+                </div>
+            </div>
+        </section>
+
+        <div class="hidden-testimonials" style="display:none;">
+            <div class="review-card">
+                <p>"My twins went together and it was the best decision we ever made.
+                    They still talk about their counselors by name."</p>
+                <h4>— Patricia G., Parent of 11-year-olds</h4>
+            </div>
+            <div class="story-card">
+                <p>"I learned how to start a fire and build a shelter. I felt like
+                    a real wilderness explorer!"</p>
+                <h4>— Cameron, age 13</h4>
+            </div>
+        </div>
+
+        <div class="show-more-container">
+            <button id="showMoreBtn" onclick="showMore()">Show More</button>
+        </div>
+
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/testimonials.js"></script>
+</body>
+
+</html>

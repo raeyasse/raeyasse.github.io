@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/enrollment.js"></script>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="icon" href="images/marmot.png" type="image/png">
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <section class="how-to-apply">
+            <h2>How to Apply</h2>
+            <p>Enrolling at Camp Rocky River is simple. Review our available sessions
+                and pricing below, then complete the form at the bottom of this page.
+                A member of our team will follow up within 2-3 business days to confirm
+                your registration, answer questions, or schedule a tour of our facilities.</p>
+        </section>
+
+        <section class="camp-sessions">
+            <h2>Camp Sessions</h2>
+            <div class="session-card">
+                <h3>Session 1 — Junior Explorers</h3>
+                <p>Ages 5–8 | June 9 – June 20, 2025</p>
+            </div>
+            <div class="session-card">
+                <h3>Session 2 — Trail Blazers</h3>
+                <p>Ages 9–12 | July 7 – July 18, 2025</p>
+            </div>
+            <div class="session-card">
+                <h3>Session 3 — Summit Leaders</h3>
+                <p>Ages 13–16 | July 28 – August 8, 2025</p>
+            </div>
+            <div class="session-card">
+                <h3>Full Summer</h3>
+                <p>Ages 5–16 | June 9 – August 8, 2025</p>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Pricing / Fees</h2>
+            <div class="pricing-card">
+                <h3>Session 1 — Junior Explorers</h3>
+                <p>$450 per camper</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Session 2 — Trail Blazers</h3>
+                <p>$450 per camper</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Session 3 — Summit Leaders</h3>
+                <p>$450 per camper</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Full Summer</h3>
+                <p>$1,100 per camper</p>
+            </div>
+            <div class="pricing-note">
+                <p>Families enrolled in SNAP or EBT may qualify for 75–100% sponsorship
+                    coverage. Select "Sponsorship Inquiry" in the form below to learn more.</p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Register / Contact Us</h2>
+
+            <form id="enrollmentForm">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" />
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@email.com" />
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="8285550192" />
+                    <span class="error" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">I am interested in</label>
+                    <select id="interest" name="interest">
+                        <option value="">-- Select One --</option>
+                        <option value="registration">Camp Registration</option>
+                        <option value="mailing">Join Mailing List</option>
+                        <option value="tour">Schedule a Tour</option>
+                        <option value="sponsorship">Sponsorship Inquiry</option>
+                    </select>
+                    <span class="error" id="interestError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="session">Preferred Session</label>
+                    <select id="session" name="session">
+                        <option value="">-- Select a Session --</option>
+                        <option value="session1">Session 1 — Junior Explorers</option>
+                        <option value="session2">Session 2 — Trail Blazers</option>
+                        <option value="session3">Session 3 — Summit Leaders</option>
+                        <option value="fullSummer">Full Summer</option>
+                    </select>
+                    <span class="error" id="sessionError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456"
+                        maxlength="19" />
+                    <span class="error" id="cardError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" />
+                    <span class="error" id="expiryError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                    <span class="error" id="cvvError"></span>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit</button>
+
+            </form>
+        </section>
+
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+
+</html>
