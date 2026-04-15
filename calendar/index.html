@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>April - May 2026 Calendar</title>
+  <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Yellow_Star_with_rounded_edges.svg">
+  
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Times New Roman', serif;
+      background-color: #f9f9f9;
+      padding-bottom: 50px;
+    }
+    .month-title {
+      text-align: center;
+      font-family: Couture, 'Bebas Neue', Anton, sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 30px 0 10px 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 850px;
+      margin-bottom: 20px;
+      table-layout: fixed;
+      background: white;
+    }
+    th {
+      font-family: Couture, 'Bebas Neue', Anton, sans-serif;
+      font-size: 0.85em;
+      border: 1px solid black;
+      padding: 8px 4px;
+      height: 30px;
+      text-align: center;
+      background: #eee;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px;
+      height: 120px;
+      vertical-align: top;
+    }
+    .day-num {
+      text-align: right;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    /* Event Styles with Checkbox */
+    .event {
+      font-size: 0.75em;
+      padding: 4px;
+      margin-bottom: 3px;
+      border-radius: 3px;
+      border-left: 4px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      user-select: none;
+    }
+    .event::before {
+      content: '☐';
+      font-family: Arial, sans-serif;
+      font-size: 1.1em;
+    }
+    .event.completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    .event.completed::before {
+      content: '☑';
+    }
+
+    /* Course Colors */
+    .itis-3135 { background-color: #e3f2fd; border-color: #2196f3; }
+    .itsc-3688 { background-color: #f1f8e9; border-color: #8bc34a; }
+    .math-2164 { background-color: #fff3e0; border-color: #ff9800; }
+    .itsc-2181 { background-color: #fce4ec; border-color: #e91e63; }
+    .itsc-2600 { background-color: #f3e5f5; border-color: #9c27b0; }
+    
+    .legend {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 0.8em;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .box { width: 12px; height: 12px; border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+<div class="month-title">APRIL 2026</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="box itsc-2181" style="border:1px solid #e91e63"></div> ITSC 2181</div>
+  <div class="legend-item"><div class="box itsc-3688" style="border:1px solid #8bc34a"></div> ITSC 3688</div>
+  <div class="legend-item"><div class="box itis-3135" style="border:1px solid #2196f3"></div> ITIS 3135</div>
+  <div class="legend-item"><div class="box math-2164" style="border:1px solid #ff9800"></div> MATH 2164</div>
+  <div class="legend-item"><div class="box itsc-2600" style="border:1px solid #9c27b0"></div> ITSC 2600</div>
+</div>
+ 
+<table>
+  <tr>
+    <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+    <td>
+      <div class="day-num">15</div>
+      <div class="event itis-3135">Project 2 Due</div>
+      <div class="event itsc-3688">Team 8 Reflection</div>
+      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+    </td>
+    <td>
+      <div class="day-num">16</div>
+      <div class="event itsc-3688">Final Group Presentation Due</div>
+    </td>
+    <td>
+      <div class="day-num">17</div>
+      <div class="event itsc-2600">Weekly Reflection 12 Due</div>
+      <div class="event math-2164">MATH Test 3 11:00 AM</div>
+    </td>
+    <td><div class="day-num">18</div></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th>
+  </tr>
+  <tr>
+    <td>
+      <div class="day-num">19</div>
+      <div class="event itsc-3688">Client Project Pt. 3A – Peer Eval Selection</div>
+      <div class="event itsc-3688">Client Project Pt. 3B – Peer Eval</div>
+    </td>
+    <td>
+      <div class="day-num">20</div>
+      <div class="event itsc-3688">Open Source Ethics Due</div>
+      <div class="event itis-3135">ITIS-3135 Class 4:00 PM</div>
+      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+    </td>
+    <td>
+      <div class="day-num">21</div>
+      <div class="event math-2164">MATH 6.5 Due</div>
+    </td>
+    <td>
+      <div class="day-num">22</div>
+      <div class="event itis-3135">Project 2 Check-Off</div>
+      <div class="event itsc-3688">Team 9 Reflection</div>
+      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+    </td>
+    <td>
+      <div class="day-num">23</div>
+      <div class="event itis-3135">Project 3 Due</div>
+    </td>
+    <td>
+      <div class="day-num">24</div>
+      <div class="event itsc-2600">Weekly Reflection 13 Due</div>
+      <div class="event itsc-2600">Campus Connections – CCI Activity</div>
+    </td>
+    <td><div class="day-num">25</div></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th>
+  </tr>
+  <tr>
+    <td>
+      <div class="day-num">26</div>
+      <div class="event itsc-3688">Client Project Pt. 4 – Interactive Elements</div>
+      <div class="event itis-3135">FCC JavaScript (Extra Credit)</div>
+    </td>
+    <td>
+      <div class="day-num">27</div>
+      <div class="event itis-3135">ITIS-3135 Class 4:00 PM</div>
+      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+    </td>
+    <td>
+      <div class="day-num">28</div>
+      <div class="event itsc-3688">Individual Group Work Assessment</div>
+    </td>
+    <td>
+      <div class="day-num">29</div>
+      <div class="event itsc-3688">Course Reflection Presentation</div>
+      <div class="event itsc-3688">Team 10 Reflection</div>
+      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+    </td>
+    <td><div class="day-num">30</div></td>
+    <td></td><td></td>
+  </tr>
+</table>
+ 
+<div class="month-title">MAY 2026</div>
+ 
+<table>
+  <tr>
+    <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td>
+    <td>
+      <div class="day-num">1</div>
+      <div class="event itsc-2600">NinerLink Discussion Use</div>
+    </td>
+    <td><div class="day-num">2</div></td>
+  </tr>
+  <tr>
+    <td><div class="day-num">3</div></td>
+    <td>
+      <div class="day-num">4</div>
+      <div class="event math-2164">MATH Final Exam 2:30 PM</div>
+      <div class="event itsc-3688">Client Project Pt. 5A Final Submission</div>
+      <div class="event itsc-3688">Client Project Pt. 5B Final Video</div>
+    </td>
+    <td><div class="day-num">5</div></td>
+    <td><div class="day-num">6</div></td>
+    <td><div class="day-num">7</div></td>
+    <td><div class="day-num">8</div></td>
+    <td><div class="day-num">9</div></td>
+  </tr>
+</table>
+
+<script>
+  // ID each event by its text content to make it "unique" for storage
+  function getStorageKey(el) {
+    return 'task-' + el.innerText.replace(/\s+/g, '-').toLowerCase();
+  }
+
+  // Load saved states
+  function loadState() {
+    document.querySelectorAll('.event').forEach(el => {
+      const saved = localStorage.getItem(getStorageKey(el));
+      if (saved === 'true') {
+        el.classList.add('completed');
+      }
+    });
+  }
+
+  // Save state on click
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('event')) {
+      const el = e.target;
+      const isCompleted = el.classList.toggle('completed');
+      localStorage.setItem(getStorageKey(el), isCompleted);
+    }
+  });
+
+  window.onload = loadState;
+</script>
+
+</body>
+</html>
