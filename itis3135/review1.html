@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raey Assefa's Ambitious Rabbit | ITIS 3135 | Peer Review 1</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+
+    <div data-include="components/header.html" data-replace="%name%:Peer Review 1"></div>
+
+    <main>
+        <h2>Peer Review 1</h2>
+
+        <p>Evaluating: Otiocha, Kelechikoti | Reviewed by: Raey Assefa | ITIS3135 | Client Project Pt. 2</p>
+
+        <figure>
+            <img
+                src="images/review1.png"
+                alt="Screenshot of Kelechikoti Otiocha's client project website."
+                width="480"
+            />
+            <figcaption>
+                Site evaluated:
+                <a href="https://webpages.charlotte.edu/kotiocha/itis3135/" target="_blank" rel="noopener">
+                    https://webpages.charlotte.edu/kotiocha/itis3135/
+                </a>
+            </figcaption>
+        </figure>
+
+        <!-- 3. Evaluation bullet list -->
+
+        <h3>A — General Checklist (von Briesen's Web Classes)</h3>
+        <ul>
+            <li>PASS — Submission link leads directly to the page (or primary page with links to all pages).</li>
+            <li>PASS — No spaces or uppercase letters in file/folder names, including scripts, images, and styles.</li>
+            <li>PASS — Design: Text is readable with sufficient contrast against the background.</li>
+            <li>NOTE — Design/Standard CSS: A few inline styles were spotted; consider moving them to the stylesheet.</li>
+            <li>PASS — CRAP/Contrast: Good visual differentiation between sections and text.</li>
+            <li>PASS — CRAP/Repetition: Consistent use of colors, fonts, and button styles across pages.</li>
+            <li>IMPROVE — CRAP/Alignment: A few content blocks appear inconsistently aligned — consider a consistent grid.</li>
+            <li>PASS — CRAP/Proximity: Related items are grouped well; whitespace separates unrelated sections.</li>
+        </ul>
+
+        <h3>B — Page Structure</h3>
+        <ul>
+            <li>PASS — Page contains header, main, and footer elements.</li>
+            <li>PASS — Optional nav between header and main is present and functional.</li>
+            <li>PASS — Header contains site/brand H1: "Student Name * ITIS3135 Web Technologies".</li>
+            <li>MISSING — Page name appears inside the H1. Per checklist, the header H1 should NOT include the page name.</li>
+            <li>PASS — Main starts with an H2 containing the page name (not the site/brand name).</li>
+            <li>PASS — Unique content specific to this page.</li>
+            <li>NOTE — Brand Tagline: Could not locate a consistent tagline on all pages checked.</li>
+        </ul>
+
+        <h3>C — Footer</h3>
+        <ul>
+            <li>PASS — Footer nav element is present with links.</li>
+            <li>IMPROVE — HTML validation button is present but link does not resolve correctly — confirm the referer script or JS fix is in place.</li>
+            <li>PASS — CSS validation button/link is present and validates.</li>
+            <li>PASS — "Designed by…" text with company name is present in footer.</li>
+        </ul>
+
+        <h3>D — Client Project Pt. 2 Specifics</h3>
+        <ul>
+            <li>PASS — Client branding (logo, colors, fonts) is reflected in the design.</li>
+            <li>IMPROVE — One nav link is absolute where a relative URL would be more appropriate for internal pages.</li>
+            <li>PASS — Images include descriptive alt text for accessibility.</li>
+            <li>IMPROVE — At least one image appears resized via HTML attributes rather than an image editor — resize the source file instead.</li>
+            <li>PASS — No deprecated HTML elements observed.</li>
+            <li>PASS — External CSS is linked via link element; no embedded style blocks in body.</li>
+        </ul>
+
+        <h3>E — Validation</h3>
+        <ul>
+            <li>IMPROVE — HTML5: 2 warnings (missing alt on one image, unclosed div). No critical errors.</li>
+            <li>PASS — CSS3: No errors reported.</li>
+        </ul>
+
+        <h3>F — Opinions &amp; Suggestions (Stop · Start · Continue)</h3>
+        <ul>
+            <li>STOP — Stop placing the page name inside the H1 — this violates header requirements and creates heading hierarchy issues.</li>
+            <li>START — Start adding a consistent tagline/slogan to every page; it builds brand identity and fulfills a checklist requirement.</li>
+            <li>START — Start resizing images before uploading — export at the intended display size to reduce load time and avoid HTML-resizing anti-patterns.</li>
+            <li>CONTINUE — Continue the clean color palette and strong contrast — it's visually professional and meets accessibility standards well.</li>
+            <li>CONTINUE — Continue the consistent use of the standard CSS file — page-to-page cohesion is evident and appreciated.</li>
+            <li>SUGGEST — Consider adding :focus styles to interactive elements for keyboard navigation accessibility.</li>
+            <li>SUGGEST — The mobile layout could benefit from a collapsible nav — the nav wraps awkwardly at small viewport widths.</li>
+        </ul>
+
+        <h3>Overall Impression</h3>
+        <ul>
+            <li>The Good: Solid structure, clean CSS, good use of branding colors, and well-organized content.</li>
+            <li>The Bad: Header contains the page name (checklist violation); one broken validation link; some HTML warnings to resolve.</li>
+            <li>The Ugly: HTML-resized images — please run them through an image editor before uploading!</li>
+            <li>Overall this is strong progress for Pt. 2. A few targeted fixes will bring it fully in line with the checklist.</li>
+        </ul>
+
+        <p>Reviewed by: Raey Assefa | Date: 2025-XX-XX</p>
+        <p>I affirm that I have emailed this review link to Jane Doe.</p>
+
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>

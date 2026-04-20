@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raey Assefa's Ambitious Rabbit | ITIS 3135 | Peer Review 2</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+
+    <div data-include="components/header.html" data-replace="%name%:Peer Review 2"></div>
+
+    <main>
+        <h2>Peer Review 2</h2>
+
+        <p>Evaluating: Henley, Jack | Reviewed by: Raey Assefa | ITIS3135 | Client Project Pt. 2</p>
+
+        <figure>
+            <img
+                src="images/review2.png"
+                alt="Screenshot of Jack Henley's client project website."
+                width="480"
+            />
+            <figcaption>
+                Site evaluated:
+                <a href="https://webpages.charlotte.edu/jhenley8/itis3135/" target="_blank" rel="noopener">
+                    https://webpages.charlotte.edu/jhenley8/itis3135/
+                </a>
+            </figcaption>
+        </figure>
+
+        <!-- 3. Evaluation bullet list -->
+
+        <h3>A — General Checklist (von Briesen's Web Classes)</h3>
+        <ul>
+            <li>PASS — Submission link leads directly to the page being reviewed without extra redirects.</li>
+            <li>MISSING — Several image filenames contain uppercase letters and spaces (e.g., Hero Image.JPG). All file/folder names must be lowercase with no spaces.</li>
+            <li>PASS — Design: Body text is clearly readable; heading hierarchy is logical and visually distinct.</li>
+            <li>PASS — Design/Standard CSS: Colors and fonts are pulled from the linked stylesheet — no rogue embedded styles detected.</li>
+            <li>PASS — CRAP/Contrast: Strong contrast between background and foreground text throughout.</li>
+            <li>IMPROVE — CRAP/Repetition: Button styles differ between the home page and interior pages — pick one style and repeat it everywhere.</li>
+            <li>PASS — CRAP/Alignment: Content is consistently left-aligned within a centered container — clean and professional.</li>
+            <li>NOTE — CRAP/Proximity: Footer links are very close together — adding a small gap or margin would improve scannability.</li>
+        </ul>
+
+        <h3>B — Page Structure</h3>
+        <ul>
+            <li>PASS — Semantic header, main, and footer are all present.</li>
+            <li>MISSING — No nav element found between header and main. Navigation links are present but not wrapped in a nav element.</li>
+            <li>PASS — Header H1 correctly reads "Student Name * ITIS3135 Web Technologies" — site brand, not page name.</li>
+            <li>PASS — Main H2 begins with page name, not site name.</li>
+            <li>PASS — Unique content is present and relevant to the client project.</li>
+            <li>PASS — Brand tagline appears consistently in the same location on each page visited.</li>
+        </ul>
+
+        <h3>C — Footer</h3>
+        <ul>
+            <li>PASS — Footer nav with required account links (Webspace, GitHub, FreeCodeCamp, Codecademy, LinkedIn) is present.</li>
+            <li>PASS — HTML validation link is present and validates successfully (no errors).</li>
+            <li>IMPROVE — CSS validation button image appears broken (404) — confirm button_validation_css.png is in the images folder with the correct lowercase filename.</li>
+            <li>PASS — "Designed by…" text with company name and URL is present.</li>
+            <li>NOTE — Confirm footer link order matches checklist: Webspace → GitHub.com → GitHub.io → Course.io → FCC → Codecademy → LinkedIn.</li>
+        </ul>
+
+        <h3>D — Client Project Pt. 2 Specifics</h3>
+        <ul>
+            <li>PASS — Client branding is visible and applied: logo, brand colors, and typography are consistent with the client's identity.</li>
+            <li>PASS — Internal navigation uses relative URLs correctly.</li>
+            <li>IMPROVE — One image is missing alt text — all img elements must have descriptive alt attributes for accessibility and validation.</li>
+            <li>PASS — No deprecated HTML (font, center, b for styling) observed.</li>
+            <li>PASS — Images appear to be exported at close to their display size — no obvious HTML-resizing shortcuts.</li>
+        </ul>
+
+        <h3>E — Validation</h3>
+        <ul>
+            <li>IMPROVE — HTML5: 1 error — missing alt on an img. Also 1 warning about a missing lang attribute on the html tag.</li>
+            <li>PASS — CSS3: Validates with no errors.</li>
+        </ul>
+
+        <h3>F — Opinions &amp; Suggestions (Stop · Start · Continue)</h3>
+        <ul>
+            <li>STOP — Stop using uppercase letters and spaces in filenames — this will cause broken links on case-sensitive servers.</li>
+            <li>STOP — Stop placing navigation outside a nav element — wrapping it properly is a semantic HTML requirement.</li>
+            <li>START — Start adding alt text to every image — it's required for both validation and accessibility.</li>
+            <li>START — Start auditing button/link styles across all pages to ensure visual consistency (Repetition principle).</li>
+            <li>CONTINUE — Continue the strong brand alignment — the client's colors and logo integrate naturally and the site feels purpose-built for the client.</li>
+            <li>CONTINUE — Continue the clear heading hierarchy — h1 → h2 → h3 is used correctly and contributes to accessibility and SEO.</li>
+            <li>SUGGEST — Add a small amount of gap or margin between footer nav links — currently they're quite cramped on mobile.</li>
+            <li>SUGGEST — Add lang="en" to your html tag — it's a best practice and removes the validator warning.</li>
+        </ul>
+
+        <h3>Overall Impression</h3>
+        <ul>
+            <li>The Good: Excellent client branding, clean CSS, logical heading hierarchy, and thoughtful content layout.</li>
+            <li>The Bad: Filename casing issues and the missing nav wrapper are checklist violations that need to be addressed before final submission.</li>
+            <li>The Ugly: Broken CSS validation button image — a small but noticeable issue that's easy to fix by checking the filename and path.</li>
+            <li>This is a solid Pt. 2 submission with a few targeted fixes needed. The overall quality and client focus are impressive — great work so far!</li>
+        </ul>
+
+        <p>Reviewed by: Raey Assefa | Date: 2025-XX-XX</p>
+        <p>I affirm that I have emailed this review link to John Smith.</p>
+
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
