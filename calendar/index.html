@@ -81,6 +81,7 @@
     .math-2164 { background-color: #fff3e0; border-color: #ff9800; }
     .itsc-2181 { background-color: #fce4ec; border-color: #e91e63; }
     .itsc-2600 { background-color: #f3e5f5; border-color: #9c27b0; }
+    .exam { background-color: rgb(253, 181, 181); border-color: red; }
     
     .legend {
       display: flex;
@@ -90,6 +91,13 @@
     }
     .legend-item { display: flex; align-items: center; gap: 5px; }
     .box { width: 12px; height: 12px; border-radius: 2px; }
+
+    .next-month{
+      background-color: lightgray;
+    }
+    .same-month{
+      background-color: white;
+    }
   </style>
 </head>
 <body>
@@ -102,6 +110,7 @@
   <div class="legend-item"><div class="box itis-3135" style="border:1px solid #2196f3"></div> ITIS 3135</div>
   <div class="legend-item"><div class="box math-2164" style="border:1px solid #ff9800"></div> MATH 2164</div>
   <div class="legend-item"><div class="box itsc-2600" style="border:1px solid #9c27b0"></div> ITSC 2600</div>
+  <div class="legend-item"><div class="box exam" style="border:1px solid red"></div> Alert/Exam</div>
 </div>
  
 <table>
@@ -191,10 +200,10 @@
       <div class="day-num">29</div>
       <div class="event itsc-3688">Course Reflection Presentation</div>
       <div class="event itsc-3688">Team 10 Reflection</div>
-      <div class="event itsc-3688">ITSC 3688 Class 5:30 PM</div>
+      <div class="event exam">Last Day of Classes</div>
     </td>
-    <td><div class="day-num">30</div></td>
-    <td></td><td></td>
+    <td class="same-month"><div class="day-num">30</div></td>
+    <td class="next-month"></td><td class="next-month"></td>
   </tr>
 </table>
  
@@ -205,7 +214,7 @@
     <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td>
+    <td class="next-month"></td><td class="next-month"></td><td class="next-month"></td><td class="next-month"></td><td class="next-month"></td>
     <td>
       <div class="day-num">1</div>
       <div class="event itsc-2600">NinerLink Discussion Use</div>
@@ -216,11 +225,15 @@
     <td><div class="day-num">3</div></td>
     <td>
       <div class="day-num">4</div>
-      <div class="event math-2164">MATH Final Exam 2:30 PM</div>
+      <div class="event exam">MATH Final Exam 2:30 PM</div>
       <div class="event itsc-3688">Client Project Pt. 5A Final Submission</div>
       <div class="event itsc-3688">Client Project Pt. 5B Final Video</div>
     </td>
-    <td><div class="day-num">5</div></td>
+    <td>
+      
+      <div class="day-num">5</div>
+      <div class="event exam">Computer Systems Exam</div>
+    </td>
     <td><div class="day-num">6</div></td>
     <td><div class="day-num">7</div></td>
     <td><div class="day-num">8</div></td>
