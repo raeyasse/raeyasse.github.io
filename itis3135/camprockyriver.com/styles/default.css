@@ -83,7 +83,7 @@ body {
 
 .hero {
     position: relative;
-    background-image: url('../images/hero.jpg');
+    background-image: url('../images/hero.png');
     background-size: cover;
     background-position: center;
     min-height: 620px;
@@ -233,7 +233,7 @@ button[type="submit"]:hover {
 }
 
 .logo {
-  width: 380px;
+  width: 350px;
   height: auto;
 }
 
