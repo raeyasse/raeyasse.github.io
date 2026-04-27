@@ -62,7 +62,7 @@ main {
     background-color: #F6F7EB;
     width: 100%;
     flex: 1;
-    padding: 2rem;
+    padding: 2rem;  /* this stays — it only applies inside main now */
 }
 
 main section {
@@ -83,30 +83,35 @@ body {
 
 .hero {
     position: relative;
-    background-image: url('../images/hero.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-
-
+    width: 100%;
+    overflow: hidden;
+    /* Remove any margin/padding interference */
+    margin: 0;
+    padding: 0;
 }
 
-.hero-text {
-    color: #ffffff;
-    max-width: 1100px;
-    margin: 0 auto;
+.hero-img {
+    display: block;
     width: 100%;
-    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+    height: auto;
+}
 
+ .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1100px;
+    color: #ffffff;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
 
 .hero-heading {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 82px);
     margin-bottom: 1rem;
     margin-top: 1rem;
-    font-size: 82px;
 }
 
 
@@ -246,7 +251,7 @@ button[type="submit"]:hover {
 
 
 .slideshow-section {
-    margin: 2rem auto;
+    margin: 1.5rem auto;
 }
 
 .slideshow-container {
@@ -305,10 +310,11 @@ button[type="submit"]:hover {
 
 .volunteer-section h2 {
     text-align: left;
+    margin-top: 2rem;
 }
 
 .volunteer-section p {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 
@@ -405,7 +411,7 @@ button[type="submit"]:hover {
 
 .accordion-section {
     margin: 2rem auto;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 #campAccordion {
@@ -420,7 +426,7 @@ button[type="submit"]:hover {
     border: 1px solid #ccc;
     color: #222;
     font-family: 'imfelldwpica', serif;
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     padding: 0.85rem 1rem;
 }
 
@@ -558,109 +564,102 @@ button[type="submit"]:hover {
 /* Activity Main*/
 .activities {
     position: relative;
-    background-image: url('../images/hero-alt.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
 
-
+.activities-img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .activities-text {
-    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
+    color: #ffffff;
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
-
 }
 
 .activities-heading {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 82px);
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 82px;
 }
 
 
 /* Enrollemnt Main*/
 .enrollment {
     position: relative;
-    background-image: url('../images/hero-alt.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.enrollment-img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .enrollment-text {
-    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
+    color: #ffffff;
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .enrollment-heading {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 82px);
     margin-bottom: 1rem;
     margin-top: 1rem;
-    font-size: 82px;
 }
 
-/* Testimonials Main*/
-.testimonials {
-    position: relative;
-    background-image: url('../images/hero-alt.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
-}
-
-.testimonials-text {
-    color: #ffffff;
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
-}
-
-.testimonials-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    font-size: 82px;
-}
-
-/* About Main*/
+/* Testimonials and About us Main*/
+.testimonials,
 .about {
     position: relative;
-    background-image: url('../images/hero-alt.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.about-text {
-    color: #ffffff;
-    max-width: 1100px;
-    margin: 0 auto;
+.testimonials-img,
+.about-img {
+    display: block;
     width: 100%;
+    height: auto;
+}
+
+.testimonials-text,
+.about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1100px;
+    color: #ffffff;
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
+.testimonials-heading,
 .about-heading {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 82px);
     margin-bottom: 1rem;
     margin-top: 1rem;
-    font-size: 82px;
 }
 
 .activity-types {
@@ -678,6 +677,7 @@ button[type="submit"]:hover {
     transition: all 0.25s ease;
     position: relative;
     overflow: hidden;
+    
 }
 
 .activity-card:hover {
