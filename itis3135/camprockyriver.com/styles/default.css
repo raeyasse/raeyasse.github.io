@@ -98,13 +98,14 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-   
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 
 }
 
 .hero-heading {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: 82px;
 }
 
@@ -112,6 +113,7 @@ body {
 body {
     font-size: 18px;
 }
+
 p {
     font-size: 1.1rem;
 }
@@ -147,16 +149,7 @@ p {
 
 
 
-.session-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    text-align: center;
-}
+
 
 
 #enrollmentForm {
@@ -178,7 +171,7 @@ p {
 
 .form-group input,
 .form-group select {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     padding: 0.6rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -233,8 +226,8 @@ button[type="submit"]:hover {
 }
 
 .logo {
-  width: 350px;
-  height: auto;
+    width: 350px;
+    height: auto;
 }
 
 
@@ -249,7 +242,7 @@ button[type="submit"]:hover {
     display: block;
     width: 25%;
     height: 2px;
-    background-color:rgb(0, 166, 221);
+    background-color: rgb(0, 166, 221);
     margin: 3px auto 0;
 }
 
@@ -258,18 +251,18 @@ button[type="submit"]:hover {
 .slideshow-section {
     margin: 2rem auto;
 }
- 
+
 .slideshow-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-   
-    
+
+
     border-radius: 8px;
     padding: 1.5rem;
 }
- 
+
 #slideshow-img {
     width: 100%;
     max-width: 750px;
@@ -277,14 +270,14 @@ button[type="submit"]:hover {
     object-fit: cover;
     border-radius: 6px;
 }
- 
+
 .slideshow-controls {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
- 
+
 .slideshow-controls button {
     padding: 0.5rem 1.25rem;
     background-color: rgb(0, 166, 221);
@@ -293,13 +286,13 @@ button[type="submit"]:hover {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    
+
 }
- 
+
 .slideshow-controls button:hover {
     background-color: rgb(3, 142, 189);
 }
- 
+
 #slideshow-counter {
     font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -312,7 +305,7 @@ button[type="submit"]:hover {
 .volunteer-section {
     margin-top: 2rem;
 }
- 
+
 .volunteer-link {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: inline-block;
@@ -322,7 +315,7 @@ button[type="submit"]:hover {
     text-decoration: none;
     font-size: 1rem;
 }
- 
+
 .volunteer-link:hover {
     text-decoration: underline;
 }
@@ -331,20 +324,20 @@ button[type="submit"]:hover {
 /* =====================
    Testimonials
    ===================== */
- 
+
 .testimonials-intro {
     margin-bottom: 0.5rem;
 }
- 
+
 .testimonials-intro p {
     color: #555;
 }
- 
+
 .testimonials-section {
     margin: 2rem auto;
     max-width: 1200px;
 }
- 
+
 /* Shared grid for all three testimonial sections */
 .testimonials-grid {
     display: grid;
@@ -352,7 +345,7 @@ button[type="submit"]:hover {
     gap: 1.5rem;
     margin-top: 1rem;
 }
- 
+
 /* Shared card style */
 .testimonial-card {
     background-color: #ffffff;
@@ -364,7 +357,7 @@ button[type="submit"]:hover {
     flex-direction: column;
     gap: 0.5rem;
 }
- 
+
 .testimonial-quote {
     font-style: italic;
     font-size: 1rem;
@@ -373,20 +366,20 @@ button[type="submit"]:hover {
     margin: 0;
     line-height: 1.6;
 }
- 
+
 .testimonial-name {
     font-weight: bold;
     font-size: 0.95rem;
     color: #222;
     margin: 0.5rem 0 0 0;
 }
- 
+
 .testimonial-role {
     font-size: 0.85rem;
     color: #777;
     margin: 0;
 }
- 
+
 #showMoreBtn {
     padding: 0.75rem 2rem;
     background-color: rgb(0, 166, 221);
@@ -396,16 +389,16 @@ button[type="submit"]:hover {
     font-size: 1rem;
     cursor: pointer;
 }
- 
+
 #showMoreBtn:hover {
     background-color: rgb(3, 133, 176);
 }
- 
+
 .show-more-container {
     text-align: center;
     margin-top: 1.5rem;
 }
- 
+
 .testimonials-intro p {
     color: #555;
 }
@@ -415,18 +408,18 @@ button[type="submit"]:hover {
 /* =====================
    jQuery-UI Accordion
    ===================== */
- 
+
 .accordion-section {
     margin: 2rem auto;
     max-width: 1200px;
 }
- 
+
 #campAccordion {
     max-width: 900px;
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
- 
+
 /* Override jQuery-UI header to match site colors */
 #campAccordion .ui-accordion-header {
     background-color: #f6f7eb;
@@ -436,30 +429,30 @@ button[type="submit"]:hover {
     font-size: 1.1rem;
     padding: 0.85rem 1rem;
 }
- 
+
 #campAccordion .ui-accordion-header:hover {
     background-color: #e8ead9;
 }
- 
+
 #campAccordion .ui-accordion-header-active {
     background-color: rgb(0, 166, 221) !important;
     color: white !important;
     border-color: rgb(0, 166, 221) !important;
 }
- 
+
 #campAccordion .ui-accordion-content {
     background-color: #fbf9ff;
     border: 1px solid #ccc;
     padding: 1.25rem;
 }
- 
+
 /* Cards inside accordion panels */
 .accordion-inner {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
- 
+
 .value-card,
 .staff-card,
 .policy-card {
@@ -468,7 +461,7 @@ button[type="submit"]:hover {
     padding: 0.85rem 1.25rem;
     background-color: #f9f9f9;
 }
- 
+
 .value-card h4,
 .staff-card h4,
 .policy-card h4 {
@@ -483,20 +476,20 @@ button[type="submit"]:hover {
 /* =====================
    Testimonials
    ===================== */
- 
+
 .testimonials-intro {
     margin-bottom: 0.5rem;
 }
- 
+
 .testimonials-intro p {
     color: #555;
 }
- 
+
 .testimonials-section {
     margin: 2rem auto;
     max-width: 1200px;
 }
- 
+
 /* Shared grid for all three testimonial sections */
 .testimonials-grid {
     display: grid;
@@ -504,14 +497,14 @@ button[type="submit"]:hover {
     gap: 1.5rem;
     margin-top: 1rem;
 }
- 
+
 /* Shared card style */
 .testimonial-card {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-left: 4px solid  rgb(0, 166, 221);
+    border-left: 4px solid rgb(0, 166, 221);
     border-top-left-radius: 8px;
-    border-right: 4px solid  rgb(0, 166, 221);
+    border-right: 4px solid rgb(0, 166, 221);
     border-top-right-radius: 8px;
     border-radius: 8px;
     padding: 1.5rem;
@@ -519,7 +512,7 @@ button[type="submit"]:hover {
     flex-direction: column;
     gap: 0.5rem;
 }
- 
+
 .testimonial-quote {
     font-style: italic;
     font-size: 1rem;
@@ -528,24 +521,24 @@ button[type="submit"]:hover {
     margin: 0;
     line-height: 1.6;
 }
- 
+
 .testimonial-name {
     font-weight: bold;
     font-size: 0.95rem;
     color: #222;
     margin: 0.5rem 0 0 0;
 }
- 
+
 .testimonial-role {
     font-size: 0.85rem;
     color: #777;
     margin: 0;
 }
- 
+
 
 #showMoreBtn {
     padding: 0.75rem 2rem;
-    background-color:  rgb(0, 166, 221);
+    background-color: rgb(0, 166, 221);
     color: white;
     border: none;
     border-radius: 4px;
@@ -553,16 +546,16 @@ button[type="submit"]:hover {
     cursor: pointer;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
- 
+
 #showMoreBtn:hover {
     background-color: rgb(3, 128, 170);
 }
- 
+
 .show-more-container {
     text-align: center;
     margin-top: 1.5rem;
 }
- 
+
 .testimonials-intro p {
     color: #555;
 }
@@ -571,7 +564,7 @@ button[type="submit"]:hover {
 /* Activity Main*/
 .activities {
     position: relative;
-    background-image: url('../images/hero.png');
+    background-image: url('../images/hero-alt.png');
     background-size: cover;
     background-position: center;
     min-height: 320px;
@@ -586,12 +579,92 @@ button[type="submit"]:hover {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-   
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 
 }
 
 .activities-heading {
     font-size: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 82px;
+}
+
+
+/* Enrollemnt Main*/
+.enrollment {
+    position: relative;
+    background-image: url('../images/hero-alt.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.enrollment-text {
+    color: #ffffff;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.enrollment-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 82px;
+}
+
+/* Testimonials Main*/
+.testimonials {
+    position: relative;
+    background-image: url('../images/hero-alt.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-text {
+    color: #ffffff;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.testimonials-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 82px;
+}
+
+/* About Main*/
+.about {
+    position: relative;
+    background-image: url('../images/hero-alt.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    color: #ffffff;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: 82px;
 }
