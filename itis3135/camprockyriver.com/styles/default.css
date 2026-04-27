@@ -299,9 +299,16 @@ button[type="submit"]:hover {
 
 
 
-.volunteer-section p, .volunteer-section a img {
-    margin-top: 2rem;
+.volunteer-section {
     text-align: center;
+}
+
+.volunteer-section h2 {
+    text-align: left;
+}
+
+.volunteer-section p {
+    margin-top: 3rem;
 }
 
 
@@ -695,5 +702,65 @@ button[type="submit"]:hover {
 @media (max-width: 768px) {
     .activity-types {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================
+   Highlights Section
+   ===================== */
+
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-cards h2 {
+    grid-column: span 2;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 50px rgb(0, 166, 221);
+}
+
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .highlight-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-cards h2 {
+        grid-column: span 1;
     }
 }
