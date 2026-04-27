@@ -12,6 +12,74 @@
     font-style: normal;
 }
 
+/* =====================
+   Base / Global
+   ===================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'imfelldwpica', serif;
+}
+
+h4 {
+    margin: 0 0 0.4rem 0;
+    font-family: 'imfelldwpica', serif;
+    font-size: 1rem;
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* =====================
+   Layout
+   ===================== */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FBF9FF;
+    padding: 0 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    box-sizing: border-box;
+    background-color: #F6F7EB;
+    width: 100%;
+    flex: 1;
+    padding: 2rem;
+}
+
+main section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #FBF9FF;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* =====================
+   Navigation
+   ===================== */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -28,75 +96,55 @@ nav a:hover {
     color: rgb(0, 166, 221);
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #FBF9FF;
-    padding: 0 5rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.logo {
+    width: 350px;
+    height: auto;
 }
 
-
-h1,
-h2,
-h3 {
-    font-family: 'imfelldwpica', serif;
+.active {
+    position: relative;
 }
 
-p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.active::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 2px;
+    background-color: rgb(0, 166, 221);
+    margin: 3px auto 0;
 }
 
-footer {
-    background-color: #FBF9FF;
-    padding: 2rem;
-    text-align: center;
-}
+/* =====================
+   Hero / Page Banners
+   ===================== */
 
-
-main {
-    box-sizing: border-box;
-    background-color: #F6F7EB;
-    width: 100%;
-    flex: 1;
-    padding: 2rem;  /* this stays — it only applies inside main now */
-}
-
-main section {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Hero Image */
-
-.hero {
+.hero,
+.activities,
+.enrollment,
+.testimonials,
+.about {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* Remove any margin/padding interference */
     margin: 0;
     padding: 0;
 }
 
-.hero-img {
+.hero-img,
+.activities-img,
+.enrollment-img,
+.testimonials-img,
+.about-img {
     display: block;
     width: 100%;
     height: auto;
 }
 
- .hero-text {
+.hero-text,
+.activities-text,
+.enrollment-text,
+.testimonials-text,
+.about-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -105,25 +153,25 @@ body {
     max-width: 1100px;
     color: #ffffff;
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
     text-align: center;
 }
 
-.hero-heading {
+.hero-heading,
+.activities-heading,
+.enrollment-heading,
+.testimonials-heading,
+.about-heading {
     font-size: clamp(2rem, 6vw, 82px);
-    margin-bottom: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-
-body {
-    font-size: 18px;
-}
-
-p {
-    font-size: 1.1rem;
-}
-
-
+/* =====================
+   Pricing
+   ===================== */
 
 .pricing {
     display: flex;
@@ -152,7 +200,9 @@ p {
     font-size: 2rem;
 }
 
-
+/* =====================
+   Enrollment Form
+   ===================== */
 
 #enrollmentForm {
     display: flex;
@@ -227,28 +277,9 @@ button[type="submit"]:hover {
     background-color: rgb(6, 123, 162);
 }
 
-.logo {
-    width: 350px;
-    height: auto;
-}
-
-
-
-
-.active {
-    position: relative;
-}
-
-.active::after {
-    content: '';
-    display: block;
-    width: 25%;
-    height: 2px;
-    background-color: rgb(0, 166, 221);
-    margin: 3px auto 0;
-}
-
-
+/* =====================
+   Slideshow
+   ===================== */
 
 .slideshow-section {
     margin: 1.5rem auto;
@@ -259,8 +290,6 @@ button[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
-
     border-radius: 8px;
     padding: 1.5rem;
 }
@@ -288,7 +317,6 @@ button[type="submit"]:hover {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-
 }
 
 .slideshow-controls button:hover {
@@ -300,15 +328,15 @@ button[type="submit"]:hover {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-
-
+/* =====================
+   Volunteer Section
+   ===================== */
 
 .volunteer-section {
     text-align: center;
 }
 
-.volunteer-section h2 {
+.volunteer-section-heading {
     text-align: left;
     margin-top: 2rem;
 }
@@ -317,10 +345,6 @@ button[type="submit"]:hover {
     margin-top: 2rem;
 }
 
-
-
-
-
 /* =====================
    Testimonials
    ===================== */
@@ -338,174 +362,18 @@ button[type="submit"]:hover {
     max-width: 1200px;
 }
 
-/* Shared grid for all three testimonial sections */
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
     margin-top: 1rem;
 }
 
-/* Shared card style */
 .testimonial-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-left: 4px solid green;
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.testimonial-quote {
-    font-style: italic;
-    font-size: 1rem;
-    color: #333;
-    flex: 1;
-    margin: 0;
-    line-height: 1.6;
-}
-
-.testimonial-name {
-    font-weight: bold;
-    font-size: 0.95rem;
-    color: #222;
-    margin: 0.5rem 0 0 0;
-}
-
-.testimonial-role {
-    font-size: 0.85rem;
-    color: #777;
-    margin: 0;
-}
-
-#showMoreBtn {
-    padding: 0.75rem 2rem;
-    background-color: rgb(0, 166, 221);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#showMoreBtn:hover {
-    background-color: rgb(3, 133, 176);
-}
-
-.show-more-container {
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.testimonials-intro p {
-    color: #555;
-}
-
-
-
-/* =====================
-   jQuery-UI Accordion
-   ===================== */
-
-.accordion-section {
-    margin: 2rem auto;
-    max-width: 1100px;
-}
-
-#campAccordion {
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Override jQuery-UI header to match site colors */
-#campAccordion .ui-accordion-header {
-    background-color: #f6f7eb;
-    border: 1px solid #ccc;
-    color: #222;
-    font-family: 'imfelldwpica', serif;
-    font-size: 1.35rem;
-    padding: 0.85rem 1rem;
-}
-
-#campAccordion .ui-accordion-header:hover {
-    background-color: #e8ead9;
-}
-
-#campAccordion .ui-accordion-header-active {
-    background-color: rgb(0, 166, 221) !important;
-    color: white !important;
-    border-color: rgb(0, 166, 221) !important;
-}
-
-#campAccordion .ui-accordion-content {
-    background-color: #fbf9ff;
-    border: 1px solid #ccc;
-    padding: 1.25rem;
-}
-
-/* Cards inside accordion panels */
-.accordion-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.value-card,
-.staff-card,
-.policy-card {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0.85rem 1.25rem;
-    background-color: #f9f9f9;
-}
-
-.value-card h4,
-.staff-card h4,
-.policy-card h4 {
-    margin: 0 0 0.4rem 0;
-    font-family: 'imfelldwpica', serif;
-    font-size: 1rem;
-}
-
-
-
-
-/* =====================
-   Testimonials
-   ===================== */
-
-.testimonials-intro {
-    margin-bottom: 0.5rem;
-}
-
-.testimonials-intro p {
-    color: #555;
-}
-
-.testimonials-section {
-    margin: 2rem auto;
-    max-width: 1200px;
-}
-
-/* Shared grid for all three testimonial sections */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-/* Shared card style */
-.testimonial-card {
+    margin: 0.75rem;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-left: 4px solid rgb(0, 166, 221);
-    border-top-left-radius: 8px;
     border-right: 4px solid rgb(0, 166, 221);
-    border-top-right-radius: 8px;
     border-radius: 8px;
     padding: 1.5rem;
     display: flex;
@@ -534,7 +402,6 @@ button[type="submit"]:hover {
     color: #777;
     margin: 0;
 }
-
 
 #showMoreBtn {
     padding: 0.75rem 2rem;
@@ -556,117 +423,76 @@ button[type="submit"]:hover {
     margin-top: 1.5rem;
 }
 
-.testimonials-intro p {
-    color: #555;
-}
+/* =====================
+   jQuery-UI Accordion
+   ===================== */
 
-
-/* Activity Main*/
-.activities {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.activities-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.activities-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+.accordion-section {
+    margin: 2rem auto;
     max-width: 1100px;
-    color: #ffffff;
-    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.activities-heading {
-    font-size: clamp(2rem, 6vw, 82px);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+#campAccordion {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-
-/* Enrollemnt Main*/
-.enrollment {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+#campAccordion .ui-accordion-header {
+    background-color: #f6f7eb;
+    border: 1px solid #ccc;
+    color: #222;
+    font-family: 'imfelldwpica', serif;
+    font-size: 1.35rem;
+    padding: 0.85rem 1rem;
 }
 
-.enrollment-img {
-    display: block;
-    width: 100%;
-    height: auto;
+#campAccordion .ui-accordion-header:hover {
+    background-color: #e8ead9;
 }
 
-.enrollment-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 1100px;
-    color: #ffffff;
-    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+/* Higher specificity instead of !important to override jQuery UI */
+#campAccordion .ui-accordion-header-active {
+    background-color: rgb(0, 166, 221);
+    color: white;
+    border-color: rgb(0, 166, 221);
 }
 
-.enrollment-heading {
-    font-size: clamp(2rem, 6vw, 82px);
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+#campAccordion .ui-accordion-content {
+    background-color: #fbf9ff;
+    border: 1px solid #ccc;
+    padding: 1.25rem;
 }
 
-/* Testimonials and About us Main*/
-.testimonials,
-.about {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+.accordion-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.testimonials-img,
-.about-img {
-    display: block;
-    width: 100%;
-    height: auto;
+.value-card,
+.staff-card,
+.policy-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.85rem 1.25rem;
+    background-color: #f9f9f9;
 }
 
-.testimonials-text,
-.about-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 1100px;
-    color: #ffffff;
-    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
-}
-
-.testimonials-heading,
-.about-heading {
-    font-size: clamp(2rem, 6vw, 82px);
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
+/* =====================
+   Activity Types
+   ===================== */
 
 .activity-types {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+}
+
+.activity-types-heading {
+    grid-column: span 2;
+    margin-bottom: 0.5rem;
 }
 
 .activity-card {
@@ -677,14 +503,14 @@ button[type="submit"]:hover {
     transition: all 0.25s ease;
     position: relative;
     overflow: hidden;
-    
 }
 
 .activity-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 50px rgb(0, 166, 221);
 }
-.activity-card h3 {
+
+.activity-card-heading {
     margin-top: 0;
     font-size: 1.4rem;
 }
@@ -694,17 +520,11 @@ button[type="submit"]:hover {
     line-height: 1.6;
 }
 
-.activity-types h2 {
-    grid-column: span 2;
-    margin-bottom: 0.5rem;
-}
-
 @media (max-width: 768px) {
     .activity-types {
         grid-template-columns: 1fr;
     }
 }
-
 
 /* =====================
    Highlights Section
@@ -718,7 +538,7 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
 }
 
-.highlight-cards h2 {
+.highlight-cards-heading {
     grid-column: span 2;
     margin-bottom: 0.5rem;
 }
@@ -738,13 +558,12 @@ button[type="submit"]:hover {
     box-shadow: 0 10px 50px rgb(0, 166, 221);
 }
 
-
 .card-icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.card h3 {
+.card-heading {
     margin-top: 0;
     font-size: 1.4rem;
 }
@@ -754,13 +573,12 @@ button[type="submit"]:hover {
     line-height: 1.6;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .highlight-cards {
         grid-template-columns: 1fr;
     }
 
-    .highlight-cards h2 {
+    .highlight-cards-heading {
         grid-column: span 1;
     }
 }
