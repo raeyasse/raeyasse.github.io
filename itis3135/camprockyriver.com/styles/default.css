@@ -362,7 +362,7 @@ button[type="submit"]:hover {
     max-width: 1200px;
 }
 
-.testimonials-grid {
+.testimonials-trim {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 1rem;
