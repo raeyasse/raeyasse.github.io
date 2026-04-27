@@ -339,10 +339,12 @@ button[type="submit"]:hover {
 .volunteer-section-heading {
     text-align: left;
     margin-top: 2rem;
+
 }
 
 .volunteer-section p {
-    margin-top: 2rem;
+    font-family:'imfelldwpica', serif; 
+    font-size: 1.34rem;
 }
 
 /* =====================
@@ -448,7 +450,7 @@ button[type="submit"]:hover {
 }
 
 #campAccordion .ui-accordion-header:hover {
-    background-color: #e8ead9;
+    background-color: rgb(21, 196, 255);
 }
 
 /* Higher specificity instead of !important to override jQuery UI */
