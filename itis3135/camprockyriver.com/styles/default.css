@@ -66,7 +66,7 @@ main {
 }
 
 main section {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -209,7 +209,7 @@ p {
     background: white;
     padding: 0 0.5rem;
     font-weight: bold;
-    color: green;
+    color: rgb(0, 166, 221);
     font-size: 0.95rem;
 }
 
@@ -220,7 +220,7 @@ p {
 
 button[type="submit"] {
     padding: 0.75rem 2rem;
-    background-color: green;
+    background-color: rgb(0, 166, 221);
     color: white;
     border: none;
     border-radius: 4px;
@@ -229,7 +229,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: darkgreen;
+    background-color: rgb(6, 123, 162);
 }
 
 .logo {
@@ -249,6 +249,349 @@ button[type="submit"]:hover {
     display: block;
     width: 25%;
     height: 2px;
-    background-color: black;
+    background-color:rgb(0, 166, 221);
     margin: 3px auto 0;
+}
+
+
+
+.slideshow-section {
+    margin: 2rem auto;
+}
+ 
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+   
+    
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+ 
+#slideshow-img {
+    width: 100%;
+    max-width: 750px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+ 
+.slideshow-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+.slideshow-controls button {
+    padding: 0.5rem 1.25rem;
+    background-color: rgb(0, 166, 221);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+ 
+.slideshow-controls button:hover {
+    background-color: rgb(3, 142, 189);
+}
+ 
+#slideshow-counter {
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+.volunteer-section {
+    margin-top: 2rem;
+}
+ 
+.volunteer-link {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: rgb(0, 166, 221);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+ 
+.volunteer-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================
+   Testimonials
+   ===================== */
+ 
+.testimonials-intro {
+    margin-bottom: 0.5rem;
+}
+ 
+.testimonials-intro p {
+    color: #555;
+}
+ 
+.testimonials-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+ 
+/* Shared grid for all three testimonial sections */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+ 
+/* Shared card style */
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 4px solid green;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+ 
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+    flex: 1;
+    margin: 0;
+    line-height: 1.6;
+}
+ 
+.testimonial-name {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #222;
+    margin: 0.5rem 0 0 0;
+}
+ 
+.testimonial-role {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+ 
+#showMoreBtn {
+    padding: 0.75rem 2rem;
+    background-color: rgb(0, 166, 221);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+ 
+#showMoreBtn:hover {
+    background-color: rgb(3, 133, 176);
+}
+ 
+.show-more-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+ 
+.testimonials-intro p {
+    color: #555;
+}
+
+
+
+/* =====================
+   jQuery-UI Accordion
+   ===================== */
+ 
+.accordion-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+ 
+#campAccordion {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+ 
+/* Override jQuery-UI header to match site colors */
+#campAccordion .ui-accordion-header {
+    background-color: #f6f7eb;
+    border: 1px solid #ccc;
+    color: #222;
+    font-family: 'imfelldwpica', serif;
+    font-size: 1.1rem;
+    padding: 0.85rem 1rem;
+}
+ 
+#campAccordion .ui-accordion-header:hover {
+    background-color: #e8ead9;
+}
+ 
+#campAccordion .ui-accordion-header-active {
+    background-color: rgb(0, 166, 221) !important;
+    color: white !important;
+    border-color: rgb(0, 166, 221) !important;
+}
+ 
+#campAccordion .ui-accordion-content {
+    background-color: #fbf9ff;
+    border: 1px solid #ccc;
+    padding: 1.25rem;
+}
+ 
+/* Cards inside accordion panels */
+.accordion-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+ 
+.value-card,
+.staff-card,
+.policy-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.85rem 1.25rem;
+    background-color: #f9f9f9;
+}
+ 
+.value-card h4,
+.staff-card h4,
+.policy-card h4 {
+    margin: 0 0 0.4rem 0;
+    font-family: 'imfelldwpica', serif;
+    font-size: 1rem;
+}
+
+
+
+
+/* =====================
+   Testimonials
+   ===================== */
+ 
+.testimonials-intro {
+    margin-bottom: 0.5rem;
+}
+ 
+.testimonials-intro p {
+    color: #555;
+}
+ 
+.testimonials-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+ 
+/* Shared grid for all three testimonial sections */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+ 
+/* Shared card style */
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 4px solid  rgb(0, 166, 221);
+    border-top-left-radius: 8px;
+    border-right: 4px solid  rgb(0, 166, 221);
+    border-top-right-radius: 8px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+ 
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+    flex: 1;
+    margin: 0;
+    line-height: 1.6;
+}
+ 
+.testimonial-name {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #222;
+    margin: 0.5rem 0 0 0;
+}
+ 
+.testimonial-role {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+ 
+
+#showMoreBtn {
+    padding: 0.75rem 2rem;
+    background-color:  rgb(0, 166, 221);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+#showMoreBtn:hover {
+    background-color: rgb(3, 128, 170);
+}
+ 
+.show-more-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+ 
+.testimonials-intro p {
+    color: #555;
+}
+
+
+/* Activity Main*/
+.activities {
+    position: relative;
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.activities-text {
+    color: #ffffff;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+   
+
+}
+
+.activities-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 82px;
 }

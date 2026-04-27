@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camp Rocky River | About Us</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery and jQuery-UI libraries (required for accordion widget) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- jQuery-UI default theme (provides accordion styling) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+
     <script src="scripts/nav.js"></script>
+    <script src="scripts/accordion.js"></script>
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="icon" href="images/marmot.png" type="image/png">
 </head>
@@ -14,90 +23,108 @@
 <body>
     <div data-include="components/header.html"></div>
 
-        <main>
+    <main>
 
-    <section class="about-camp">
-        <h2>About</h2>
-        <p>Nestled in the heart of the Appalachian Mountains, Camp Rocky River has 
-        been providing youth with transformative outdoor experiences since 1987. 
-        We believe every child deserves the chance to unplug, grow, and discover 
-        what they are truly capable of — regardless of their financial background. 
-        Through generous sponsors, we cover 75–100% of costs for families enrolled 
-        in SNAP or EBT.</p>
-    </section>
+        <section class="about-camp">
+            <h2>About</h2>
+            <p>Nestled in the heart of the Appalachian Mountains, Camp Rocky River has
+                been providing youth with transformative outdoor experiences since 1987.
+                We believe every child deserves the chance to unplug, grow, and discover
+                what they are truly capable of — regardless of their financial background.
+                Through generous sponsors, we cover 75–100% of costs for families enrolled
+                in SNAP or EBT.</p>
+        </section>
 
-    <section class="camp-values">
-        <h2>Camp Values</h2>
-        <div class="value-card">
-            <h3>Inclusivity</h3>
-            <p>Every child is welcome at Camp Rocky River. We work hard to ensure 
-            that financial barriers never stand between a child and the outdoors.</p>
-        </div>
-        <div class="value-card">
-            <h3>Leadership</h3>
-            <p>We develop confident, compassionate leaders through hands-on programs 
-            that challenge campers to grow beyond their comfort zones.</p>
-        </div>
-        <div class="value-card">
-            <h3>Community</h3>
-            <p>From neighboring towns to our camp family, we are committed to giving 
-            back through volunteer work and community service.</p>
-        </div>
-        <div class="value-card">
-            <h3>Stewardship</h3>
-            <p>We teach campers to respect and care for the natural world around them, 
-            building a lifelong love of the outdoors.</p>
-        </div>
-    </section>
+        <!-- Accordion section — jQuery-UI targets #campAccordion -->
+        <!-- Structure jQuery-UI expects: <h3> followed by <div> for each panel -->
+        <section class="accordion-section">
+            <h2>Explore More</h2>
+            <div id="campAccordion">
 
-    <section class="meet-the-staff">
-        <h2>Meet the Staff</h2>
-        <div class="staff-card">
-            <h3>Director — Karen Holloway</h3>
-            <p>Karen has led Camp Rocky River for over 15 years. A former wilderness 
-            guide and educator, she is passionate about making outdoor experiences 
-            accessible to every child.</p>
-        </div>
-        <div class="staff-card">
-            <h3>Head Counselor — James Okafor</h3>
-            <p>James brings 8 years of camp experience and specializes in leadership 
-            development and team building programs.</p>
-        </div>
-        <div class="staff-card">
-            <h3>Wilderness Skills Lead — Maria Santos</h3>
-            <p>Maria is a certified wilderness first responder and leads all hiking, 
-            survival skills, and outdoor education programming.</p>
-        </div>
-        <div class="staff-card">
-            <h3>Arts and Recreation Lead — Devon Price</h3>
-            <p>Devon oversees all creative and recreational activities including arts 
-            and crafts, canoeing, swimming, and campfire events.</p>
-        </div>
-    </section>
+                <!-- Panel 1: Camp Values -->
+                <h3>Camp Values</h3>
+                <div>
+                    <div class="accordion-inner">
+                        <div class="value-card">
+                            <h4>Inclusivity</h4>
+                            <p>Every child is welcome at Camp Rocky River. We work hard to ensure
+                                that financial barriers never stand between a child and the outdoors.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Leadership</h4>
+                            <p>We develop confident, compassionate leaders through hands-on programs
+                                that challenge campers to grow beyond their comfort zones.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Community</h4>
+                            <p>From neighboring towns to our camp family, we are committed to giving
+                                back through volunteer work and community service.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Stewardship</h4>
+                            <p>We teach campers to respect and care for the natural world around them,
+                                building a lifelong love of the outdoors.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="safety-policies">
-        <h2>Safety and Policies</h2>
-        <div class="policy-card">
-            <h3>Staff Certifications</h3>
-            <p>All staff are background checked, CPR certified, and trained in 
-            wilderness first aid before the start of each season.</p>
-        </div>
-        <div class="policy-card">
-            <h3>Camper to Staff Ratio</h3>
-            <p>We maintain a 5:1 camper to staff ratio at all times to ensure 
-            every child receives the attention and supervision they deserve.</p>
-        </div>
-        <div class="policy-card">
-            <h3>Medical Policies</h3>
-            <p>A licensed nurse is on site throughout every session. All campers 
-            must submit a health form and emergency contact information prior to arrival.</p>
-        </div>
-        <div class="policy-card">
-            <h3>Code of Conduct</h3>
-            <p>Camp Rocky River is a safe, respectful environment for all. Bullying, 
-            harassment, and discrimination of any kind are not tolerated.</p>
-        </div>
-    </section>
+                <!-- Panel 2: Meet the Staff -->
+                <h3>Meet the Staff</h3>
+                <div>
+                    <div class="accordion-inner">
+                        <div class="staff-card">
+                            <h4>Director — Karen Holloway</h4>
+                            <p>Karen has led Camp Rocky River for over 15 years. A former wilderness
+                                guide and educator, she is passionate about making outdoor experiences
+                                accessible to every child.</p>
+                        </div>
+                        <div class="staff-card">
+                            <h4>Head Counselor — James Okafor</h4>
+                            <p>James brings 8 years of camp experience and specializes in leadership
+                                development and team building programs.</p>
+                        </div>
+                        <div class="staff-card">
+                            <h4>Wilderness Skills Lead — Maria Santos</h4>
+                            <p>Maria is a certified wilderness first responder and leads all hiking,
+                                survival skills, and outdoor education programming.</p>
+                        </div>
+                        <div class="staff-card">
+                            <h4>Arts and Recreation Lead — Devon Price</h4>
+                            <p>Devon oversees all creative and recreational activities including arts
+                                and crafts, canoeing, swimming, and campfire events.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Safety and Policies -->
+                <h3>Safety and Policies</h3>
+                <div>
+                    <div class="accordion-inner">
+                        <div class="policy-card">
+                            <h4>Staff Certifications</h4>
+                            <p>All staff are background checked, CPR certified, and trained in
+                                wilderness first aid before the start of each season.</p>
+                        </div>
+                        <div class="policy-card">
+                            <h4>Camper to Staff Ratio</h4>
+                            <p>We maintain a 5:1 camper to staff ratio at all times to ensure
+                                every child receives the attention and supervision they deserve.</p>
+                        </div>
+                        <div class="policy-card">
+                            <h4>Medical Policies</h4>
+                            <p>A licensed nurse is on site throughout every session. All campers
+                                must submit a health form and emergency contact information prior to arrival.</p>
+                        </div>
+                        <div class="policy-card">
+                            <h4>Code of Conduct</h4>
+                            <p>Camp Rocky River is a safe, respectful environment for all. Bullying,
+                                harassment, and discrimination of any kind are not tolerated.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

@@ -7,18 +7,34 @@
     <title>Camp Rocky River | Activities</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/slideshow.js"></script>
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="icon" href="images/marmot.png" type="image/png">
 </head>
 
 <body>
     <div data-include="components/header.html"></div>
+    <section class="activities">
+            <div class="activities-text">
+                <h1 class="activities-heading">Activities</h1>
+                <h2>From mountain trails to campfire nights, every day at Camp Rocky River is packed
+                     with adventure, teamwork, and memories that last a lifetime. Here's a look at what 
+                     campers experience during their stay.</h2>
+            </div>
+        </section>
     <main>
-        <section class="activities-intro">
-            <h2>Activities</h2>
-            <p>From mountain trails to campfire nights, every day at Camp Rocky River
-                is packed with adventure, teamwork, and memories that last a lifetime.
-                Here's a look at what campers experience during their stay.</p>
+
+        <!-- Slideshow Gallery -->
+        <section class="slideshow-section">
+            <h2>Activity Gallery</h2>
+            <div class="slideshow-container">
+                <img id="slideshow-img" src="images/activity1.jpg" alt="Camp activity photo" />
+                <div class="slideshow-controls">
+                    <button id="prevBtn">&#9664;</button>
+                    <span id="slideshow-counter">1 / 3</span>
+                    <button id="nextBtn"> &#9658;</button>
+                </div>
+            </div>
         </section>
 
         <section class="activity-types">
@@ -52,6 +68,16 @@
                     are a favorite memory for campers year after year.</p>
             </div>
 
+        </section>
+
+         <!-- Volunteer Organization Link (client requirement) -->
+        <section class="volunteer-section">
+            <h2>Get Involved</h2>
+            <p>Camp Rocky River partners with local volunteer organizations to give back
+                to Appalachian communities.</p>
+            <a href="https://www.handsonasheville.org" target="_blank" class="volunteer-link">
+                <img src="images/united-way.png" alt="united way of asheville" width="200">
+            </a>
         </section>
     </main>
     <div data-include="components/footer.html"></div>
