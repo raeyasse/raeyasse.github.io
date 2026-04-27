@@ -7,7 +7,6 @@
     <title>Camp Rocky River | Enrollment</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="scripts/enrollment.js"></script>
-    <script src="scripts/nav.js"></script>
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="icon" href="images/marmot.png" type="image/png">
 </head>
@@ -19,128 +18,129 @@
         <div class="enrollment-text">
             <h1 class="enrollment-heading">Enrollment</h1>
             <h2>Signing up for Camp Rocky River is easy. Check sessions and pricing below,
-                 then fill out the form. Our team will follow up within 2 to 3 business days. </h2>
-        </div>
-    </section>
-    <main>
-
-
-        <section class="pricing">
-            <h2>Pricing / Fees</h2>
-            <div class="pricing-card">
-                <div class="pricing-info">
-                    <h3>Session 1 — Junior Explorers &nbsp;|&nbsp; June 9 – June 20, 2026</h3>
-                    <p>$450 per camper</p>
-                </div>
-                <span class="card-emoji"><img src="images/tent.png" alt="image of tent" width="100"></span>
-            </div>
-            <div class="pricing-card">
-                <div>
-                    <h3>Session 2 — Trail Blazers &nbsp;|&nbsp; July 7 – July 18, 2026 </h3>
-                    <p>$450 per camper</p>
-                </div>
-                <span class="card-emoji"><img src="images/hike.png" alt="image of a man hiking" width="100"></span>
-            </div>
-            <div class="pricing-card">
-                <div>
-                    <h3>Session 3 — Summit Leaders &nbsp;|&nbsp; July 28 – August 8, 2026 </h3>
-                    <p>$450 per camper</p>
-                </div>
-                <span class="card-emoji"><img src="images/mountain.png" alt="image of mountain" width="100"></span>
-            </div>
-            <div class="pricing-card">
-                <div>
-                    <h3>Full Summer &nbsp;|&nbsp; June 9 – August 8, 2026 </h3>
-                    <p>$1,100 per camper</p>
-                </div>
-                <span class="card-emoji"><img src="images/tree.png" alt="image of tree" width="100"></span>
+                then fill out the form. Our team will follow up within 2 to 3 business days. </h2>
             </div>
         </section>
-
-        <section class="contact-form">
-            <h2>Register / Contact Us</h2>
-
-            <form id="enrollmentForm">
-
-                <div class="form-section">
-                    <span class="form-section-title">Personal Info</span>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" />
-                            <span class="error" id="nameError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="8285550192" />
-                            <span class="error" id="phoneError"></span>
-                        </div>
+        <main>
+            
+            
+            <section class="pricing">
+                <h2>Pricing / Fees</h2>
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>Session 1 — Junior Explorers &nbsp;|&nbsp; June 9 – June 20, 2026</h3>
+                        <p>$450 per camper</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="jane@email.com" />
-                        <span class="error" id="emailError"></span>
-                    </div>
+                    <span class="card-emoji"><img src="images/tent.png" alt="image of tent" width="100"></span>
                 </div>
-
-                <div class="form-section">
-                    <span class="form-section-title">Camp Preferences</span>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="interest">I am interested in</label>
-                            <select id="interest" name="interest">
-                                <option value="">-- Select One --</option>
-                                <option value="registration">Camp Registration</option>
-                                <option value="mailing">Join Mailing List</option>
-                                <option value="tour">Schedule a Tour</option>
-                                <option value="sponsorship">Sponsorship Inquiry</option>
-                            </select>
-                            <span class="error" id="interestError"></span>
+                <div class="pricing-card">
+                    <div>
+                        <h3>Session 2 — Trail Blazers &nbsp;|&nbsp; July 7 – July 18, 2026 </h3>
+                        <p>$450 per camper</p>
+                    </div>
+                    <span class="card-emoji"><img src="images/hike.png" alt="image of a man hiking" width="100"></span>
+                </div>
+                <div class="pricing-card">
+                    <div>
+                        <h3>Session 3 — Summit Leaders &nbsp;|&nbsp; July 28 – August 8, 2026 </h3>
+                        <p>$450 per camper</p>
+                    </div>
+                    <span class="card-emoji"><img src="images/mountain.png" alt="image of mountain" width="100"></span>
+                </div>
+                <div class="pricing-card">
+                    <div>
+                        <h3>Full Summer &nbsp;|&nbsp; June 9 – August 8, 2026 </h3>
+                        <p>$1,100 per camper</p>
+                    </div>
+                    <span class="card-emoji"><img src="images/tree.png" alt="image of tree" width="100"></span>
+                </div>
+            </section>
+            
+            <section class="contact-form">
+                <h2>Register / Contact Us</h2>
+                
+                <form id="enrollmentForm">
+                    
+                    <div class="form-section">
+                        <span class="form-section-title">Personal Info</span>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" />
+                                <span class="error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="8285550192" />
+                                <span class="error" id="phoneError"></span>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="session">Preferred Session</label>
-                            <select id="session" name="session">
-                                <option value="">-- Select a Session --</option>
-                                <option value="session1">Session 1 — Junior Explorers</option>
-                                <option value="session2">Session 2 — Trail Blazers</option>
-                                <option value="session3">Session 3 — Summit Leaders</option>
-                                <option value="fullSummer">Full Summer</option>
-                            </select>
-                            <span class="error" id="sessionError"></span>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@email.com" />
+                            <span class="error" id="emailError"></span>
                         </div>
                     </div>
-                </div>
-
-                <div class="form-section">
-                    <span class="form-section-title">Payment</span>
-                    <div class="form-group">
-                        <label for="cardNumber">Card Number</label>
-                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456"
+                    
+                    <div class="form-section">
+                        <span class="form-section-title">Camp Preferences</span>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="interest">I am interested in</label>
+                                <select id="interest" name="interest">
+                                    <option value="">-- Select One --</option>
+                                    <option value="registration">Camp Registration</option>
+                                    <option value="mailing">Join Mailing List</option>
+                                    <option value="tour">Schedule a Tour</option>
+                                    <option value="sponsorship">Sponsorship Inquiry</option>
+                                </select>
+                                <span class="error" id="interestError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="session">Preferred Session</label>
+                                <select id="session" name="session">
+                                    <option value="">-- Select a Session --</option>
+                                    <option value="session1">Session 1 — Junior Explorers</option>
+                                    <option value="session2">Session 2 — Trail Blazers</option>
+                                    <option value="session3">Session 3 — Summit Leaders</option>
+                                    <option value="fullSummer">Full Summer</option>
+                                </select>
+                                <span class="error" id="sessionError"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <span class="form-section-title">Payment</span>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456"
                             maxlength="19" />
-                        <span class="error" id="cardError"></span>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="expiry">Expiration Date</label>
-                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" />
-                            <span class="error" id="expiryError"></span>
+                            <span class="error" id="cardError"></span>
                         </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
-                            <span class="error" id="cvvError"></span>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiration Date</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" />
+                                <span class="error" id="expiryError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                                <span class="error" id="cvvError"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <button type="submit" id="submitBtn">Submit</button>
-
-            </form>
-        </section>
-
-    </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/HTMLInclude.min.js"></script>
-</body>
-
-</html>
+                    
+                    <button type="submit" id="submitBtn">Submit</button>
+                    
+                </form>
+            </section>
+            
+        </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+        <script src="scripts/nav.js"></script>
+    </body>
+    
+    </html>
