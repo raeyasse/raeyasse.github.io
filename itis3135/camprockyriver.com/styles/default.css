@@ -144,7 +144,9 @@ nav a:hover {
     width: 100%;
     height: auto;
 }
-
+.hero-img{
+    background-color: black;
+}
 .hero-text,
 .activities-text,
 .enrollment-text,
