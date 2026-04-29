@@ -556,3 +556,13 @@ main{
   font-size:115%;
 }
 
+.review-img {
+    display: table; /* Centers the figure element itself */
+    margin: 0 auto; /* Centers the figure block horizontally */
+    text-align: center; /* Centers the text (figcaption) inside */
+}
+
+.review-img img {
+    display: block; /* Ensures the image doesn't have extra bottom space */
+    margin: 0 auto; /* Ensures image is centered if figure is wider */
+}
