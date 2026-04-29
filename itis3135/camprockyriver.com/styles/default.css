@@ -279,7 +279,7 @@ nav a:hover {
 button[type="submit"] {
     padding: 0.75rem 2rem;
     background-color: rgb(0, 166, 221);
-    color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -619,4 +619,9 @@ button[type="submit"]:hover {
     gap: 10px;
     margin-top: 14px;
     margin-bottom: -5px;
+}
+
+#prevBtn,#nextBtn{
+    background-color: #222;
+
 }
